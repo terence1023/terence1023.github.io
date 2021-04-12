@@ -1,0 +1,1893 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Task1 区块链简介与以太坊入门介绍, Terence">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Task1 区块链简介与以太坊入门介绍 | Terence</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Terence</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Terence</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/terence1023" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/terence1023" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Task1 区块链简介与以太坊入门介绍</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/DataWhale/">
+                                <span class="chip bg-color">DataWhale</span>
+                            </a>
+                        
+                            <a href="/tags/BlockChain/">
+                                <span class="chip bg-color">BlockChain</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-03-17
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-03-17
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    13.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    49 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="一、区块链简介"><a href="#一、区块链简介" class="headerlink" title="一、区块链简介"></a>一、区块链简介</h1><h2 id="1-1、区块链的本质"><a href="#1-1、区块链的本质" class="headerlink" title="1.1、区块链的本质"></a>1.1、区块链的本质</h2><p>区块链，是一种特殊的分布式数据库，去中心化是其最大的特点。</p>
+<p>去中心化一词，我是在美剧硅谷中第一次清楚地接触到，简单梳理下硅谷剧情，记忆不准确，<a target="_blank" rel="noopener" href="https://www.chainnews.com/articles/962007723378.htm">参考博客</a></p>
+<ul>
+<li>发散压缩算法 (Middle-Out Algorithm)</li>
+<li>去中心化的互联网-New Internet</li>
+<li>安东之子 Son of Anton</li>
+</ul>
+<p>在正式的产品交付前几天，Richard 发现自己发送的加密信息，在 Morika 接受的短信中少了一个点，更严重的是，网络发送量和接受量不一致。最终推演的结果是，网络的加密算法被绕过或者被攻破了。加密算法可以说是世界上最重要的算法之一，如果说一旦有破解工具，一切隐私、安全都不存在。最终 Piper 创始人选择放弃，关上潘多拉魔盒。</p>
+<p>说回正题，本文是作为一个区块链初学者的知识总结，参考了很多优秀的博客，文章框架按照学习思路汇总，在文章最后会附上参考资料链接。区块链的主要作用是储存信息。任何需要保存的信息，都可以写入区块链，也可以从里面读取，所以它是数据库。任何人都可以架设服务器，加入区块链网络，成为一个节点。区块链的世界里面，没有中心节点，每个节点都是平等的，都保存着整个数据库。你可以向任何一个节点，写入/读取数据，因为所有节点最后都会同步，保证区块链一致。</p>
+<h2 id="1-2、区块链的特点"><a href="#1-2、区块链的特点" class="headerlink" title="1.2、区块链的特点"></a>1.2、区块链的特点</h2><p>分布式数据库并非新发明，市场上早有此类产品。但是，区块链有一个革命性特点。</p>
+<p><strong>区块链没有管理员，它是彻底无中心的。</strong>其他的数据库都有管理员，但是区块链没有。如果有人想对区块链添加审核，也实现不了，因为它的设计目标就是防止出现居于中心地位的管理当局。</p>
+<p>正是因为无法管理，区块链才能做到无法被控制。否则一旦大公司大集团控制了管理权，他们就会控制整个平台，其他使用者就都必须听命于他们了。</p>
+<p>但是，没有了管理员，人人都可以往里面写入数据，怎么才能保证数据是可信的呢？被坏人改了怎么办？请接着往下读，这就是区块链奇妙的地方。</p>
+<h2 id="1-3、区块链技术与算法"><a href="#1-3、区块链技术与算法" class="headerlink" title="1.3、区块链技术与算法"></a>1.3、区块链技术与算法</h2><p>区块链技术不是单独的一项技术，而是一系列技术组成的技术栈，其具有以下的特点：</p>
+<ul>
+<li>数据分布式存储</li>
+<li>存储的数据不可逆、不可篡改、可回溯</li>
+<li>数据的创建和维护由所有参与方共同参与</li>
+</ul>
+<p>为了实现这些特点、维护区块链应用的稳定运行，区块链技术中包含了分布式存储技术、密码学技术、共识机制以及区块链2.0提出的智能合约。</p>
+<h3 id="1-3-1、区块"><a href="#1-3-1、区块" class="headerlink" title="1.3.1、区块"></a>1.3.1、区块</h3><p>区块链由一个个区块（block）组成。区块很像数据库的记录，每次写入数据，就是创建一个区块。</p>
+<p><img src="/2021/03/17/task1-qu-kuai-lian-jian-jie-yu-yi-tai-fang-ru-men-jie-shao/区块.png" alt="区块"></p>
+<p>每个区块包含两个部分。</p>
+<blockquote>
+<ul>
+<li>区块头（Head）：记录当前区块的特征值</li>
+<li>区块体（Body）：实际数据</li>
+</ul>
+</blockquote>
+<p>区块头包含了当前区块的多项特征值。</p>
+<blockquote>
+<ul>
+<li>生成时间</li>
+<li>实际数据（即区块体）的哈希</li>
+<li>上一个区块的哈希</li>
+<li>…</li>
+</ul>
+</blockquote>
+<p>这里，我们需要理解什么叫<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/哈希值">哈希</a>（hash），这是理解区块链必需的。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017122704.png" alt="区块"></p>
+<p>所谓”哈希”就是计算机可以对任意内容，计算出一个长度相同的特征值。区块链的哈希长度是256位，这就是说，不管原始内容是什么，最后都会计算出一个256位的二进制数字。而且可以保证，只要原始内容不同，对应的哈希一定是不同的。</p>
+<p>举例来说，字符串<code>123</code>的哈希是<code>a8fdc205a9f19cc1c7507a60c4f01b13d11d7fd0</code>（十六进制），转成二进制就是256位，而且只有<code>123</code>能得到这个哈希。（理论上，其他字符串也有可能得到这个哈希，但是概率极低，可以近似认为不可能发生。）</p>
+<p>因此，就有两个重要的推论。</p>
+<blockquote>
+<ul>
+<li>推论1：每个区块的哈希都是不一样的，可以通过哈希标识区块。</li>
+<li>推论2：如果区块的内容变了，它的哈希一定会改变。</li>
+</ul>
+</blockquote>
+<h3 id="1-3-2、Hash-的不可修改性"><a href="#1-3-2、Hash-的不可修改性" class="headerlink" title="1.3.2、Hash 的不可修改性"></a>1.3.2、Hash 的不可修改性</h3><p>区块与哈希是一一对应的，每个区块的哈希都是针对”区块头”（Head）计算的。也就是说，把区块头的各项特征值，按照顺序连接在一起，组成一个很长的字符串，再对这个字符串计算哈希。</p>
+<blockquote>
+<p>Hash = SHA256( 区块头 )</p>
+</blockquote>
+<p>上面就是区块哈希的计算公式，<code>SHA256</code>是区块链的哈希算法。注意，这个公式里面只包含区块头，不包含区块体，也就是说，哈希由区块头唯一决定，</p>
+<p>前面说过，区块头包含很多内容，其中有当前区块体的哈希，还有上一个区块的哈希。这意味着，如果当前区块体的内容变了，或者上一个区块的哈希变了，一定会引起当前区块的哈希改变。</p>
+<p>这一点对区块链有重大意义。如果有人修改了一个区块，该区块的哈希就变了。为了让后面的区块还能连到它（因为下一个区块包含上一个区块的哈希），该人必须依次修改后面所有的区块，否则被改掉的区块就脱离区块链了。由于后面要提到的原因，哈希的计算很耗时，短时间内修改多个区块几乎不可能发生，除非有人掌握了全网51%以上的计算能力。</p>
+<p>正是通过这种联动机制，区块链保证了自身的可靠性，数据一旦写入，就无法被篡改。这就像历史一样，发生了就是发生了，从此再无法改变。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017122705.png" alt="区块链"></p>
+<p>每个区块都连着上一个区块，这也是”区块链”这个名字的由来。</p>
+<h3 id="1-3-3、分布式存储技术"><a href="#1-3-3、分布式存储技术" class="headerlink" title="1.3.3、分布式存储技术"></a>1.3.3、分布式存储技术</h3><p>与传统的数据存储技术不同，在区块链技术中，数据并不是集中存放在某个数据中心上，也不是由某个权威机构或是大多数节点来存储，而是分散存储在区块链网络中的每一个节点上。</p>
+<p><img src="/2021/03/17/task1-qu-kuai-lian-jian-jie-yu-yi-tai-fang-ru-men-jie-shao/中心化存储.png" alt="中心化存储" style="zoom:80%;"></p>
+<p><img src="/2021/03/17/task1-qu-kuai-lian-jian-jie-yu-yi-tai-fang-ru-men-jie-shao/分布式存储.png" alt="分布式存储" style="zoom:80%;"></p>
+<p><strong>节点和区块的关系是什么？</strong></p>
+<p>可以用共享文档来简单描述：所有可以访问共享文档的账号就叫做节点，当然全节点需要同步共享文档，也就是拥有全部的区块数据区块就是共享文档。每个人更新了，所有人都可以查看最新的文档</p>
+<h3 id="1-3-4、密码学技术"><a href="#1-3-4、密码学技术" class="headerlink" title="1.3.4、密码学技术"></a>1.3.4、密码学技术</h3><p>为了实现数据的不可逆、不可篡改和可回溯，区块链技术采用了一系列密码学算法和技术，包括哈希算法、Merkle 树、非对称加密算法。</p>
+<h4 id="哈希算法"><a href="#哈希算法" class="headerlink" title="哈希算法"></a>哈希算法</h4><p>哈希算法是一个单向函数，可以将任意长度的输入数据转化为固定长度的输出数据（哈希值），哈希值就是这段输入数据唯一的数值表现。由于在计算上不可能找到哈希值相同而输入值不同的字符串，因此两段数据的哈希值相同，就可以认为这两段数据也是相同的，所以哈希算法常被用于对数据进行验证。</p>
+<p>在区块链中，数据存储在区块里。每个区块都有一个区块头，区块头中存储了一个将该区块所有数据经过哈希算法得到的哈希值，同时，每个区块中还存储了前一个区块的哈希值，这样就形成了区块链。如果想要篡改某一个区块A中的数据，就会导致A的哈希值发生变化，后一个区块B就无法通过哈希值正确地指向A，这样篡改者又必须篡改B中的数据……也就是说，篡改者需要篡改被篡改的区块以及后面的所有区块，才能让所有的节点都接受篡改。</p>
+<h4 id="Merkle树"><a href="#Merkle树" class="headerlink" title="Merkle树"></a>Merkle树</h4><p>Merkle树是一种树形结构，在区块链中，Merkle树的叶子节点是区块中数据的哈希值，非叶子节点是其子结点组合后的哈希值，这样由叶子节点开始逐层往上计算，最终形成一个Merkle根，记录在区块的头部，这样就可以保证每一笔交易都无法篡改。</p>
+<center class="half">
+    <img src="/2021/03/17/task1-qu-kuai-lian-jian-jie-yu-yi-tai-fang-ru-men-jie-shao/image4.png" width="500">
+</center>
+<center>Merkle 树</center>
+
+<p>Merkle Tree实际上就是 树+Hash，具有树的性质，树的每个节点都是Hash值。Merkle Tree有以下特点：</p>
+<ol>
+<li>Merkle Tree可以是二叉树，也可以是多叉树，不管是什么树，它都具有树结构的所有特点。</li>
+<li>Merkel Tree的叶子节点的Value是数据集合的单元数据 或 单元数据的Hash值。</li>
+<li>Merkel Tree所有非叶子节点的Value是所有子节点Value的Hash值。</li>
+</ol>
+<h5 id="Merkle-Tree的应用"><a href="#Merkle-Tree的应用" class="headerlink" title="Merkle Tree的应用"></a>Merkle Tree的应用</h5><p>Merkel Tree多用在数据验证，其中最有名的应用领域可能就属加密货币了。矿机在挖矿实际上就是在运算一组复杂的公式：</p>
+<blockquote>
+<p>SHA256(SHA256(version + prevHash + <strong>merkleRoot</strong> + time + currentDifficulty + nonce )) &lt; TARGET</p>
+</blockquote>
+<p>这里不必深究公式的意义，只需要关注其中的一个“merkleRoot”参数，这个“merkleRoot”就是Merkle Tree的根节点的值。想要算出根节点的值，必须要从叶子节点出发（在加密货币中，叶子节点通常为各区块内从n个交易提取的n个Hash值），最后由根节点的两个子节点的Hash计算出根节点的Hash。这只是挖矿的一个小环节。</p>
+<h5 id="Merkle-Tree的实现"><a href="#Merkle-Tree的实现" class="headerlink" title="Merkle Tree的实现"></a>Merkle Tree的实现</h5><ul>
+<li>使用python语言，用到hashlib</li>
+<li>为了简便，这里的Merkle Tree为二叉树</li>
+<li>简单的将子节点Hash相加来生成父节点的Hash</li>
+<li>假设初始有八个叶子节点，输出结果为二叉树各节点的值</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> hashlib
+
+
+<span class="token keyword">class</span> <span class="token class-name">Merkle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment">#Merkle Tree</span>
+    Merkle_tree <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> values<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 将字符串初始化为叶子节点的Hash值</span>
+        child_node_start_index <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>values<span class="token punctuation">)</span>
+        total_length <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>values<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">1</span>
+        sha256 <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>sha256<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>Merkle_tree <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">""</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>total_length<span class="token punctuation">)</span><span class="token punctuation">]</span>
+        
+        <span class="token keyword">for</span> each <span class="token keyword">in</span> values<span class="token punctuation">:</span>
+            sha256<span class="token punctuation">.</span>update<span class="token punctuation">(</span>each<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>Merkle_tree<span class="token punctuation">[</span>child_node_start_index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> sha256<span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            child_node_start_index <span class="token operator">+=</span> <span class="token number">1</span>
+        
+    <span class="token keyword">def</span> <span class="token function">merkel_yourself</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 生成Merkle Tree</span>
+        node_index <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>Merkle_tree<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>  <span class="token comment"># 由叶子节点末尾向前计算非叶子节点的Hash</span>
+        sha256 <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>sha256<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        
+        <span class="token keyword">while</span> node_index <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            sha256<span class="token punctuation">.</span>update<span class="token punctuation">(</span>self<span class="token punctuation">.</span>Merkle_tree<span class="token punctuation">[</span>node_index<span class="token punctuation">]</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>Merkle_tree<span class="token punctuation">[</span>node_index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>Merkle_tree<span class="token punctuation">[</span>node_index <span class="token operator">//</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> sha256<span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            node_index <span class="token operator">-=</span> <span class="token number">2</span>
+        
+    <span class="token keyword">def</span> <span class="token function">show_yourself</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> each <span class="token keyword">in</span> self<span class="token punctuation">.</span>Merkle_tree<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>each<span class="token punctuation">)</span>
+    
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    values <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 测试数据</span>
+    values<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"Terence"</span><span class="token punctuation">)</span>
+    values<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"Terence1023"</span><span class="token punctuation">)</span>
+    values<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"TerenceCai"</span><span class="token punctuation">)</span>
+	values<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"Don't forget me, I beg"</span><span class="token punctuation">)</span> 
+    values<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"I'll remember you said"</span><span class="token punctuation">)</span> 
+    values<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"Sometime it lasts in love"</span><span class="token punctuation">)</span> 
+    values<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"But sometimes it hurts instead"</span><span class="token punctuation">)</span>
+    
+    tree <span class="token operator">=</span> Merkle<span class="token punctuation">(</span>values<span class="token operator">=</span>values<span class="token punctuation">)</span>
+    tree<span class="token punctuation">.</span>merkel_yourself<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    tree<span class="token punctuation">.</span>show_yourself<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="非对称加密技术"><a href="#非对称加密技术" class="headerlink" title="非对称加密技术"></a>非对称加密技术</h4><p>非对称加密技术使用两个非对称密钥：公钥和私钥。公钥和私钥具有两个特点：</p>
+<ol>
+<li>通过其中一个密钥加密信息后，使用另一个密钥才能解开</li>
+<li>公钥一般可以公开，私钥则保密</li>
+</ol>
+<p>在区块链中，非对称加密技术主要用于信息加密、数字签名和登录认证。在信息加密场景中，信息发送者A使用接收者B提供的公钥对信息进行加密，B收到加密的信息后再通过自己的私钥进行解密。再数字签名场景中，发送者A通过自己的私钥对信息进行加密，其他人通过A提供的公钥来对信息进行验证，证明信息确实是由A发出。在登录认证场景中，客户端使用私钥加密登录信息后进行发送，其他人通过客户端公钥来认证登录信息。</p>
+<ul>
+<li><p>RSA 算法</p>
+<p>​        RSA加密算法是最常用的非对称加密算法，CFCA在证书服务中离不了它。但是有不少新来的同事对它不太了解，恰好看到一本书中作者用实例对它进行了简化而生动的描述，使得高深的数学理论能够被容易地理解。<br>​       RSA是第一个比较完善的公开密钥算法，它既能用于加密，也能用于数字签名。RSA以它的三个发明者Ron Rivest, Adi Shamir, Leonard Adleman的名字首字母命名，这个算法经受住了多年深入的密码分析，虽然密码分析者既不能证明也不能否定RSA的安全性，但这恰恰说明该算法有一定的可信性，目前它已经成为最流行的公开密钥算法。<br>　　RSA的安全基于大数分解的难度。其公钥和私钥是一对大素数（100到200位十进制数或更大）的函数。从一个公钥和密文恢复出明文的难度，等价于分解两个大素数之积（这是公认的数学难题）。 </p>
+</li>
+<li><p>ECC 椭圆曲线算法</p>
+<p>具体可以参见此文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/36326221">ECC椭圆曲线加密算法：介绍</a></p>
+</li>
+</ul>
+<h3 id="1-3-5、非对称加密技术——RSA-算法"><a href="#1-3-5、非对称加密技术——RSA-算法" class="headerlink" title="1.3.5、非对称加密技术——RSA 算法"></a>1.3.5、非对称加密技术——RSA 算法</h3><p>所谓非对称加密，其实很简单，就是加密和解密需要两把钥匙：一把公钥和一把私钥。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2018/bg2018010403.png" alt=""></p>
+<p>公钥是公开的，任何人都可以获取。私钥是保密的，只有拥有者才能使用。他人使用你的公钥加密信息，然后发送给你，你用私钥解密，取出信息。反过来，你也可以用私钥加密信息，别人用你的公钥解开，从而证明这个信息确实是你发出的，且未被篡改，这叫做数字签名。</p>
+<h4 id="RSA-算法原理"><a href="#RSA-算法原理" class="headerlink" title="RSA 算法原理"></a>RSA 算法原理</h4><h5 id="1-加密历史"><a href="#1-加密历史" class="headerlink" title="1.加密历史"></a>1.加密历史</h5><p>1976年以前，所有的加密方法都是同一种模式：</p>
+<blockquote>
+<p>　　（1）甲方选择某一种加密规则，对信息进行加密；</p>
+<p>　　（2）乙方使用同一种规则，对信息进行解密。</p>
+</blockquote>
+<p>由于加密和解密使用同样规则（简称”密钥”），这被称为<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/zh-cn/对等加密">“对称加密算法”</a>（Symmetric-key algorithm）。</p>
+<p>这种加密模式有一个最大弱点：甲方必须把加密规则告诉乙方，否则无法解密。保存和传递密钥，就成了最头疼的问题。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/201306/bg2013062703.jpg" alt=""></p>
+<p>1976年，两位美国计算机学家Whitfield Diffie 和 Martin Hellman，提出了一种崭新构思，可以在不直接传递密钥的情况下，完成解密。这被称为<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Diffie–Hellman_key_exchange">“Diffie-Hellman密钥交换算法”</a>。这个算法启发了其他科学家。人们认识到，加密和解密可以使用不同的规则，只要这两种规则之间存在某种对应关系即可，这样就避免了直接传递密钥。</p>
+<p>这种新的加密模式被称为”非对称加密算法”。</p>
+<blockquote>
+<p>　　（1）乙方生成两把密钥（公钥和私钥）。公钥是公开的，任何人都可以获得，私钥则是保密的。</p>
+<p>　　（2）甲方获取乙方的公钥，然后用它对信息加密。</p>
+<p>　　（3）乙方得到加密后的信息，用私钥解密。</p>
+</blockquote>
+<p>如果公钥加密的信息只有私钥解得开，那么只要私钥不泄漏，通信就是安全的。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/201306/bg2013062702.jpg" alt=""></p>
+<p>1977年，三位数学家Rivest、Shamir 和 Adleman 设计了一种算法，可以实现非对称加密。这种算法用他们三个人的名字命名，叫做<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/zh-cn/RSA加密算法">RSA算法</a>。从那时直到现在，RSA算法一直是最广为使用的”非对称加密算法”。毫不夸张地说，只要有计算机网络的地方，就有RSA算法。</p>
+<p>这种算法非常<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/RSA_Factoring_Challenge">可靠</a>，密钥越长，它就越难破解。根据已经披露的文献，目前被破解的最长RSA密钥是768个二进制位。也就是说，长度超过768位的密钥，还无法破解（至少没人公开宣布）。因此可以认为，1024位的RSA密钥基本安全，2048位的密钥极其安全。</p>
+<p>下面，我就进入正题，解释RSA算法的原理。文章共分成两部分，今天是第一部分，介绍要用到的四个数学概念。你可以看到，RSA算法并不难，只需要一点<a target="_blank" rel="noopener" href="http://jeremykun.com/2011/07/30/number-theory-a-primer/">数论知识</a>就可以理解。</p>
+<h5 id="2-互质关系"><a href="#2-互质关系" class="headerlink" title="2.互质关系"></a>2.互质关系</h5><p>如果两个正整数，除了1以外，没有其他公因子，我们就称这两个数是<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/zh-cn/互素">互质关系</a>（coprime）。比如，15和32没有公因子，所以它们是互质关系。这说明，不是质数也可以构成互质关系。</p>
+<p>关于互质关系，不难得到以下结论：</p>
+<blockquote>
+<p>　　1. 任意两个质数构成互质关系，比如13和61。</p>
+<p>　　2. 一个数是质数，另一个数只要不是前者的倍数，两者就构成互质关系，比如3和10。</p>
+<p>　　3. 如果两个数之中，较大的那个数是质数，则两者构成互质关系，比如97和57。</p>
+<p>　　4. 1和任意一个自然数是都是互质关系，比如1和99。</p>
+<p>　　5. p是大于1的整数，则p和p-1构成互质关系，比如57和56。</p>
+<p>　　6. p是大于1的奇数，则p和p-2构成互质关系，比如17和15。</p>
+</blockquote>
+<h5 id="3-欧拉函数"><a href="#3-欧拉函数" class="headerlink" title="3.欧拉函数"></a>3.欧拉函数</h5><p>请思考以下问题：</p>
+<blockquote>
+<p>　　任意给定正整数n，请问在小于等于n的正整数之中，有多少个与n构成互质关系？（比如，在1到8之中，有多少个数与8构成互质关系？）</p>
+</blockquote>
+<p>计算这个值的方法就叫做<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/欧拉函数">欧拉函数</a>，以φ(n)表示。在1到8之中，与8形成互质关系的是1、3、5、7，所以 φ(n) = 4。</p>
+<p>φ(n) 的计算方法并不复杂，但是为了得到最后那个公式，需要一步步讨论。</p>
+<p><strong>第一种情况</strong></p>
+<p>如果n=1，则 φ(1) = 1 。因为1与任何数（包括自身）都构成互质关系。</p>
+<p><strong>第二种情况</strong></p>
+<p>如果n是质数，则 φ(n)=n-1 。因为质数与小于它的每一个数，都构成互质关系。比如5与1、2、3、4都构成互质关系。</p>
+<p><strong>第三种情况</strong></p>
+<p>如果n是质数的某一个次方，即 n = p^k (p为质数，k为大于等于1的整数)，则</p>
+<script type="math/tex; mode=display">
+\phi\left(p^{k}\right)=p^{k}-p^{k-1}</script><p>比如 φ(8) = φ(2^3) =2^3 - 2^2 = 8 -4 = 4。</p>
+<p>这是因为只有当一个数不包含质数p，才可能与n互质。而包含质数p的数一共有p^(k-1)个，即1×p、2×p、3×p、…、p^(k-1)×p，把它们去除，剩下的就是与n互质的数。</p>
+<p>上面的式子还可以写成下面的形式：</p>
+<script type="math/tex; mode=display">
+\phi\left(p^{k}\right)=p^{k}-p^{k-1}=p^{k}\left(1-\frac{1}{p}\right)</script><p>可以看出，上面的第二种情况是 k=1 时的特例。</p>
+<p><strong>第四种情况</strong></p>
+<p>如果n可以分解成两个互质的整数之积，</p>
+<blockquote>
+<p>　　n = p1 × p2</p>
+</blockquote>
+<p>则</p>
+<blockquote>
+<p>　　φ(n) = φ(p1p2) = φ(p1)φ(p2)</p>
+</blockquote>
+<p>即积的欧拉函数等于各个因子的欧拉函数之积。比如，φ(56)=φ(8×7)=φ(8)×φ(7)=4×6=24。</p>
+<p>这一条的证明要用到<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Chinese_remainder_theorem">“中国剩余定理”</a>，这里就不展开了，只简单说一下思路：如果a与p1互质(a&lt;p1)，b与p2互质(b&lt;p2)，c与p1p2互质(c&lt;p1p2)，则c与数对 (a,b) 是一一对应关系。由于a的值有φ(p1)种可能，b的值有φ(p2)种可能，则数对 (a,b) 有φ(p1)φ(p2)种可能，而c的值有φ(p1p2)种可能，所以φ(p1p2)就等于φ(p1)φ(p2)。</p>
+<p><strong>第五种情况</strong></p>
+<p>因为任意一个大于1的正整数，都可以写成一系列质数的积。</p>
+<script type="math/tex; mode=display">
+n=p_{1}^{k_{1}} p_{2}^{k_{2} \ldots } p_{r}^{k_{r}}</script><p>根据第4条的结论，得到</p>
+<script type="math/tex; mode=display">
+\phi(n)=\phi\left(p_{1}^{k_{1}}\right) \phi\left(p_{2}^{k_{2}}\right) \ldots \phi\left(p_{r}^{k_{r}}\right)</script><p>再根据第3条的结论，得到</p>
+<script type="math/tex; mode=display">
+\phi(n)=p_{1}^{k_{1}} p_{2}^{k_{2} \ldots} p_{r}^{k_{r}}\left(1-\frac{1}{p_{1}}\right)\left(1-\frac{1}{p_{2}}\right) \ldots\left(1-\frac{1}{p_{r}}\right)</script><p>也就等于</p>
+<script type="math/tex; mode=display">
+\phi(n)=n\left(1-\frac{1}{p_{1}}\right)\left(1-\frac{1}{p_{2}}\right) \ldots\left(1-\frac{1}{p_{r}}\right)</script><p>这就是欧拉函数的通用计算公式。比如，1323的欧拉函数，计算过程如下：</p>
+<script type="math/tex; mode=display">
+\phi(1323)=\phi\left(3^{3} \times 7^{2}\right)=1323\left(1-\frac{1}{3}\right)\left(1-\frac{1}{7}\right)=756</script><h5 id="4-欧拉定理"><a href="#4-欧拉定理" class="headerlink" title="4.欧拉定理"></a>4.欧拉定理</h5><p>欧拉函数的用处，在于<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/欧拉定理_(数论">欧拉定理</a>)。”欧拉定理”指的是：</p>
+<blockquote>
+<p>如果两个正整数a和n互质，则n的欧拉函数 φ(n) 可以让下面的等式成立：</p>
+<script type="math/tex; mode=display">
+a^{\phi(n)} \equiv 1(\bmod n)</script></blockquote>
+<p>也就是说，a的φ(n)次方被n除的余数为1。或者说，a的φ(n)次方减去1，可以被n整除。比如，3和7互质，而7的欧拉函数φ(7)等于6，所以3的6次方（729）减去1，可以被7整除（728/7=104）。</p>
+<p>欧拉定理的证明比较复杂，这里就省略了。我们只要记住它的结论就行了。</p>
+<p>欧拉定理可以大大简化某些运算。比如，7和10互质，根据欧拉定理，</p>
+<script type="math/tex; mode=display">
+7^{\phi(10)} \equiv 1(\bmod 10)</script><p>已知 φ(10) 等于4，所以马上得到7的4倍数次方的个位数肯定是1。</p>
+<script type="math/tex; mode=display">
+7^{4 k} \equiv 1(\bmod 10)</script><p>因此，7的任意次方的个位数（例如7的222次方），心算就可以算出来。</p>
+<p>欧拉定理有一个特殊情况。</p>
+<blockquote>
+<p>假设正整数a与质数p互质，因为质数p的φ(p)等于p-1，则欧拉定理可以写成</p>
+<script type="math/tex; mode=display">
+a^{p-1} \equiv 1(\bmod p)</script></blockquote>
+<p>这就是著名的<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/费马小定理">费马小定理</a>。它是欧拉定理的特例。</p>
+<p>欧拉定理是RSA算法的核心。理解了这个定理，就可以理解RSA。</p>
+<h5 id="5-模反元素"><a href="#5-模反元素" class="headerlink" title="5.模反元素"></a>5.模反元素</h5><p>还剩下最后一个概念：</p>
+<blockquote>
+<p>如果两个正整数a和n互质，那么一定可以找到整数b，使得 ab-1 被n整除，或者说ab被n除的余数是1。</p>
+<script type="math/tex; mode=display">
+a b \equiv 1(\bmod n)</script><p>这时，b就叫做a的<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/模反元素">“模反元素”</a>。</p>
+</blockquote>
+<p>比如，3和11互质，那么3的模反元素就是4，因为 (3 × 4)-1 可以被11整除。显然，模反元素不止一个， 4加减11的整数倍都是3的模反元素 {…,-18,-7,4,15,26,…}，即如果b是a的模反元素，则 b+kn 都是a的模反元素。</p>
+<p>欧拉定理可以用来证明模反元素必然存在。</p>
+<script type="math/tex; mode=display">
+a^{\phi(n)} =aa^{\phi(n)-1}\equiv 1(\bmod n)</script><p>可以看到，a的 φ(n)-1 次方，就是a的模反元素。</p>
+<h5 id="6-密钥生成的步骤"><a href="#6-密钥生成的步骤" class="headerlink" title="6.密钥生成的步骤"></a>6.密钥生成的步骤</h5><p>我们通过一个例子，来理解RSA算法。假设<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/爱丽丝与鲍伯">爱丽丝</a>要与鲍勃进行加密通信，她该怎么生成公钥和私钥呢？</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201307/bg2013070302.png" alt=""></p>
+<p><strong>第一步，随机选择两个不相等的质数p和q。</strong></p>
+<p>爱丽丝选择了61和53。（实际应用中，这两个质数越大，就越难破解。）</p>
+<p><strong>第二步，计算p和q的乘积n。</strong></p>
+<p>爱丽丝就把61和53相乘。</p>
+<blockquote>
+<p>　　n = 61×53 = 3233</p>
+</blockquote>
+<p>n的长度就是密钥长度。3233写成二进制是110010100001，一共有12位，所以这个密钥就是12位。实际应用中，RSA密钥一般是1024位，重要场合则为2048位。</p>
+<p><strong>第三步，计算n的欧拉函数φ(n)。</strong></p>
+<p>根据公式：</p>
+<blockquote>
+<p>　　φ(n) = (p-1)(q-1)</p>
+</blockquote>
+<p>爱丽丝算出φ(3233)等于60×52，即3120。</p>
+<p><strong>第四步，随机选择一个整数e，条件是1&lt; e &lt; φ(n)，且e与φ(n) 互质。</strong></p>
+<p>爱丽丝就在1到3120之间，随机选择了17。（实际应用中，常常选择65537。）</p>
+<p><strong>第五步，计算e对于φ(n)的模反元素d。</strong></p>
+<p>所谓<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/模反元素">“模反元素”</a>就是指有一个整数d，可以使得ed被φ(n)除的余数为1。</p>
+<blockquote>
+<p>　　ed ≡ 1 (mod φ(n))</p>
+</blockquote>
+<p>这个式子等价于</p>
+<blockquote>
+<p>　　ed - 1 = kφ(n)</p>
+</blockquote>
+<p>于是，找到模反元素d，实质上就是对下面这个二元一次方程求解。</p>
+<blockquote>
+<script type="math/tex; mode=display">
+e x+\varphi(n) y=1</script></blockquote>
+<p>已知 e=17, φ(n)=3120，</p>
+<blockquote>
+<p>　　17x + 3120y = 1</p>
+</blockquote>
+<p>这个方程可以用<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/扩展欧几里得算法">“扩展欧几里得算法”</a>求解，此处省略具体过程。总之，爱丽丝算出一组整数解为 (x,y)=(2753,-15)，即 d=2753。</p>
+<p>至此所有计算完成。</p>
+<p><strong>第六步，将n和e封装成公钥，n和d封装成私钥。</strong></p>
+<p>在爱丽丝的例子中，n=3233，e=17，d=2753，所以公钥就是 (3233,17)，私钥就是（3233, 2753）。</p>
+<p>实际应用中，公钥和私钥的数据都采用<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/zh-cn/ASN.1">ASN.1</a>格式表达（<a target="_blank" rel="noopener" href="http://hi.baidu.com/mathack/item/d0ad4cc1514a3663f7c95da2">实例</a>）。</p>
+<h5 id="7-RSA算法的可靠性"><a href="#7-RSA算法的可靠性" class="headerlink" title="7.RSA算法的可靠性"></a>7.RSA算法的可靠性</h5><p>回顾上面的密钥生成步骤，一共出现六个数字：</p>
+<blockquote>
+<p>　　p<br>　　q<br>　　n<br>　　φ(n)<br>　　e<br>　　d</p>
+</blockquote>
+<p>这六个数字之中，公钥用到了两个（n和e），其余四个数字都是不公开的。其中最关键的是d，因为n和d组成了私钥，一旦d泄漏，就等于私钥泄漏。</p>
+<p><strong>那么，有无可能在已知n和e的情况下，推导出d？</strong></p>
+<blockquote>
+<p>　　（1）ed≡1 (mod φ(n))。只有知道e和φ(n)，才能算出d。</p>
+<p>　　（2）φ(n)=(p-1)(q-1)。只有知道p和q，才能算出φ(n)。</p>
+<p>　　（3）n=pq。只有将n因数分解，才能算出p和q。</p>
+</blockquote>
+<p><strong>结论：如果n可以被因数分解，d就可以算出，也就意味着私钥被破解。</strong></p>
+<p>可是，大整数的因数分解，是一件非常困难的事情。目前，除了暴力破解，还没有发现别的有效方法。维基百科这样写道：</p>
+<blockquote>
+<p>　　“对极大整数做因数分解的难度决定了RSA算法的可靠性。换言之，对一极大整数做因数分解愈困难，RSA算法愈可靠。</p>
+<p>　　假如有人找到一种快速因数分解的算法，那么RSA的可靠性就会极度下降。但找到这样的算法的可能性是非常小的。今天只有短的RSA密钥才可能被暴力破解。到2008年为止，世界上还没有任何可靠的攻击RSA算法的方式。</p>
+<p>　　只要密钥长度足够长，用RSA加密的信息实际上是不能被解破的。”</p>
+</blockquote>
+<p>举例来说，你可以对3233进行因数分解（61×53），但是你没法对下面这个整数进行因数分解。</p>
+<blockquote>
+<p>　　12301866845301177551304949<br>　　58384962720772853569595334<br>　　79219732245215172640050726<br>　　36575187452021997864693899<br>　　56474942774063845925192557<br>　　32630345373154826850791702<br>　　61221429134616704292143116<br>　　02221240479274737794080665<br>　　351419597459856902143413</p>
+</blockquote>
+<p>它等于这样两个质数的乘积：</p>
+<blockquote>
+<p>　　33478071698956898786044169<br>　　84821269081770479498371376<br>　　85689124313889828837938780<br>　　02287614711652531743087737<br>　　814467999489<br>　　　　×<br>　　36746043666799590428244633<br>　　79962795263227915816434308<br>　　76426760322838157396665112<br>　　79233373417143396810270092<br>　　798736308917</p>
+</blockquote>
+<p>事实上，这大概是人类已经分解的最大整数（232个十进制位，768个二进制位）。比它更大的因数分解，还没有被报道过，因此目前被破解的最长RSA密钥就是768位。</p>
+<h5 id="8-加密和解密"><a href="#8-加密和解密" class="headerlink" title="8.加密和解密"></a>8.加密和解密</h5><p>有了公钥和密钥，就能进行加密和解密了。</p>
+<p><strong>（1）加密要用公钥 (n,e)</strong></p>
+<p>假设鲍勃要向爱丽丝发送加密信息m，他就要用爱丽丝的公钥 (n,e) 对m进行加密。这里需要注意，m必须是整数（字符串可以取ascii值或unicode值），且m必须小于n。</p>
+<p>所谓”加密”，就是算出下式的c：</p>
+<blockquote>
+<p>　　me ≡ c (mod n)</p>
+</blockquote>
+<p>爱丽丝的公钥是 (3233, 17)，鲍勃的m假设是65，那么可以算出下面的等式：</p>
+<blockquote>
+<p>　　6517 ≡ 2790 (mod 3233)</p>
+</blockquote>
+<p>于是，c等于2790，鲍勃就把2790发给了爱丽丝。</p>
+<p><strong>（2）解密要用私钥(n,d)</strong></p>
+<p>爱丽丝拿到鲍勃发来的2790以后，就用自己的私钥(3233, 2753) 进行解密。可以证明，下面的等式一定成立：</p>
+<blockquote>
+<p>　　cd ≡ m (mod n)</p>
+</blockquote>
+<p>也就是说，c的d次方除以n的余数为m。现在，c等于2790，私钥是(3233, 2753)，那么，爱丽丝算出</p>
+<blockquote>
+<p>　　27902753 ≡ 65 (mod 3233)</p>
+</blockquote>
+<p>因此，爱丽丝知道了鲍勃加密前的原文就是65。</p>
+<p>至此，”加密—解密”的整个过程全部完成。</p>
+<p>我们可以看到，如果不知道d，就没有办法从c求出m。而前面已经说过，要知道d就必须分解n，这是极难做到的，所以RSA算法保证了通信安全。</p>
+<p>你可能会问，公钥(n,e) 只能加密小于n的整数m，那么如果要加密大于n的整数，该怎么办？有两种解决方法：一种是把长信息分割成若干段短消息，每段分别加密；另一种是先选择一种”对称性加密算法”（比如<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/资料加密标准">DES</a>），用这种算法的密钥加密信息，再用RSA公钥加密DES密钥。</p>
+<p><strong>九、私钥解密的证明</strong></p>
+<p>最后，我们来证明，为什么用私钥解密，一定可以正确地得到m。也就是证明下面这个式子：</p>
+<blockquote>
+<p>　　cd ≡ m (mod n)</p>
+</blockquote>
+<p>因为，根据加密规则</p>
+<blockquote>
+<p>　　ｍe ≡ c (mod n)</p>
+</blockquote>
+<p>于是，c可以写成下面的形式：</p>
+<blockquote>
+<p>　　c = me - kn</p>
+</blockquote>
+<p>将c代入要我们要证明的那个解密规则：</p>
+<blockquote>
+<p>　　(me - kn)d ≡ m (mod n)</p>
+</blockquote>
+<p>它等同于求证</p>
+<blockquote>
+<p>　　med ≡ m (mod n)</p>
+</blockquote>
+<p>由于</p>
+<blockquote>
+<p>　　ed ≡ 1 (mod φ(n))</p>
+</blockquote>
+<p>所以</p>
+<blockquote>
+<p>　　ed = hφ(n)+1</p>
+</blockquote>
+<p>将ed代入：</p>
+<blockquote>
+<p>　　mhφ(n)+1 ≡ m (mod n)</p>
+</blockquote>
+<p>接下来，分成两种情况证明上面这个式子。</p>
+<p><strong>（1）m与n互质。</strong></p>
+<p>根据欧拉定理，此时</p>
+<blockquote>
+<p>　　mφ(n) ≡ 1 (mod n)</p>
+</blockquote>
+<p>得到</p>
+<blockquote>
+<p>　　(mφ(n))h × m ≡ m (mod n)</p>
+</blockquote>
+<p>原式得到证明。</p>
+<p><strong>（2）m与n不是互质关系。</strong></p>
+<p>此时，由于n等于质数p和q的乘积，所以m必然等于kp或kq。</p>
+<p>以 m = kp为例，考虑到这时k与q必然互质，则根据欧拉定理，下面的式子成立：</p>
+<blockquote>
+<p>　　(kp)q-1 ≡ 1 (mod q)</p>
+</blockquote>
+<p>进一步得到</p>
+<blockquote>
+<p>　　[(kp)q-1]h(p-1) × kp ≡ kp (mod q)</p>
+</blockquote>
+<p>即</p>
+<blockquote>
+<p>　　(kp)ed ≡ kp (mod q)</p>
+</blockquote>
+<p>将它改写成下面的等式</p>
+<blockquote>
+<p>　　(kp)ed = tq + kp</p>
+</blockquote>
+<p>这时t必然能被p整除，即 t=t’p</p>
+<blockquote>
+<p>　　(kp)ed = t’pq + kp</p>
+</blockquote>
+<p>因为 m=kp，n=pq，所以</p>
+<blockquote>
+<p>　　med ≡ m (mod n)</p>
+</blockquote>
+<p>原式得到证明。</p>
+<h4 id="数字签名"><a href="#数字签名" class="headerlink" title="数字签名"></a>数字签名</h4><p><strong>数字签名是什么？</strong></p>
+<p>作者：David Youd</p>
+<p>翻译：阮一峰</p>
+<p>原文网址：<a target="_blank" rel="noopener" href="http://www.youdzone.com/signature.html">http://www.youdzone.com/signature.html</a></p>
+<p>1.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080901.png" alt=""></p>
+<p>鲍勃有两把钥匙，一把是公钥，另一把是私钥。</p>
+<p>2.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080902.png" alt=""></p>
+<p>鲍勃把公钥送给他的朋友们——帕蒂、道格、苏珊——每人一把。</p>
+<p>3.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080903.png" alt=""></p>
+<p>苏珊要给鲍勃写一封保密的信。她写完后用鲍勃的公钥加密，就可以达到保密的效果。</p>
+<p>4.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080904.png" alt=""></p>
+<p>鲍勃收信后，用私钥解密，就看到了信件内容。这里要强调的是，只要鲍勃的私钥不泄露，这封信就是安全的，即使落在别人手里，也无法解密。</p>
+<p>5.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080905.png" alt=""></p>
+<p>鲍勃给苏珊回信，决定采用”数字签名”。他写完后先用Hash函数，生成信件的摘要（digest）。</p>
+<p>6.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080906.png" alt=""></p>
+<p>然后，鲍勃使用私钥，对这个摘要加密，生成”数字签名”（signature）。</p>
+<p>7.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080907.png" alt=""></p>
+<p>鲍勃将这个签名，附在信件下面，一起发给苏珊。</p>
+<p>8.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080908.png" alt=""></p>
+<p>苏珊收信后，取下数字签名，用鲍勃的公钥解密，得到信件的摘要。由此证明，这封信确实是鲍勃发出的。</p>
+<p>9.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080909.png" alt=""></p>
+<p>苏珊再对信件本身使用Hash函数，将得到的结果，与上一步得到的摘要进行对比。如果两者一致，就证明这封信未被修改过。</p>
+<p>10.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080910.png" alt=""></p>
+<p>复杂的情况出现了。道格想欺骗苏珊，他偷偷使用了苏珊的电脑，用自己的公钥换走了鲍勃的公钥。此时，苏珊实际拥有的是道格的公钥，但是还以为这是鲍勃的公钥。因此，道格就可以冒充鲍勃，用自己的私钥做成”数字签名”，写信给苏珊，让苏珊用假的鲍勃公钥进行解密。</p>
+<p>11.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080911.png" alt=""></p>
+<p>后来，苏珊感觉不对劲，发现自己无法确定公钥是否真的属于鲍勃。她想到了一个办法，要求鲍勃去找”证书中心”（certificate authority，简称CA），为公钥做认证。证书中心用自己的私钥，对鲍勃的公钥和一些相关信息一起加密，生成”数字证书”（Digital Certificate）。</p>
+<p>12.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080912.png" alt=""></p>
+<p>鲍勃拿到数字证书以后，就可以放心了。以后再给苏珊写信，只要在签名的同时，再附上数字证书就行了。</p>
+<p>13.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080913.png" alt=""></p>
+<p>苏珊收信后，用CA的公钥解开数字证书，就可以拿到鲍勃真实的公钥了，然后就能证明”数字签名”是否真的是鲍勃签的。</p>
+<p>14.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080914.jpg" alt=""></p>
+<p>下面，我们看一个应用”数字证书”的实例：https协议。这个协议主要用于网页加密。</p>
+<p>15.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080915.png" alt=""></p>
+<p>首先，客户端向服务器发出加密请求。</p>
+<p>16.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080916.png" alt=""></p>
+<p>服务器用自己的私钥加密网页以后，连同本身的数字证书，一起发送给客户端。</p>
+<p>17.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080917.png" alt=""></p>
+<p>客户端（浏览器）的”证书管理器”，有”受信任的根证书颁发机构”列表。客户端会根据这张列表，查看解开数字证书的公钥是否在列表之内。</p>
+<p>18.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080918.png" alt=""></p>
+<p>如果数字证书记载的网址，与你正在浏览的网址不一致，就说明这张证书可能被冒用，浏览器会发出警告。</p>
+<p>19.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080919.jpg" alt=""></p>
+<p>如果这张数字证书不是由受信任的机构颁发的，浏览器会发出另一种警告。</p>
+<p>20.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/201108/bg2011080920.png" alt=""></p>
+<p>如果数字证书是可靠的，客户端就可以使用证书中的服务器公钥，对信息进行加密，然后与服务器交换加密信息。</p>
+<h3 id="1-3-6、共识机制"><a href="#1-3-6、共识机制" class="headerlink" title="1.3.6、共识机制"></a>1.3.6、共识机制</h3><p>区块链系统是一个分布式系统，分布式系统要解决都首要问题就是一致性问题，也就是如何使多个孤立的节点达成共识。在中心化系统中，由于有一个中心服务器这样的“领导”来统一各个节点，因此达成一致性几乎没有问题。但在去中心化场景下，由于各个节点是相互独立的，就可能会出现许多不一致的问题，例如由于网络状况等因素部分节点可能会有延迟、故障甚至宕机，造成节点之间通信的不可靠，因此一致性问题是分布式系统中一个很令人头疼的问题。</p>
+<p>由 Eirc Brewer 提出，Lynch 等人证明的 CAP 定理为解决分布式系统中的一致性问题提供了思路。CAP 定理的描述如下：在分布式系统中，<strong>一致性</strong>、<strong>可用性</strong>和<strong>分区容错性</strong>三者不可兼得。这三个术语的解释如下：</p>
+<ul>
+<li>一致性（<strong>C</strong>onsistency）：所有节点在同一时刻拥有同样的值（等同于所有节点访问同一份最新的数据副本</li>
+<li>可用性（<strong>A</strong>vailability）：每个请求都可以在有限时间内收到确定其是否成功的响应</li>
+<li>分区容错性（<strong>P</strong>artition tolerance）：分区是指部分节点因为网络原因无法与其他节点达成一致。分区容错性是指由网络原因导致的系统分区不影响系统的正常运行。例如，由于网络原因系统被分为 A, B, C, D 四个区，A, B 中的节点无法正常工作，但 C, D 组成的分区仍能提供正常服务。</li>
+</ul>
+<p>在某些场景下，对一致性、可用性和分区容错性中的某一个特性要求不高时，就可以考虑弱化该特性，来保证整个系统的容错能力。区块链中常见的共识机制的基本思路正是来自 CAP 定理，部分区块链应用中用到的共识机制如下表：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>共识机制</th>
+<th>应用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PoW</td>
+<td>比特币、莱特币、以太坊的前三个阶段</td>
+</tr>
+<tr>
+<td>PoS</td>
+<td>PeerCoin、NXT、以太坊的第四个阶段</td>
+</tr>
+<tr>
+<td>PBFT</td>
+<td>Hyperledger Fabric</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="PoW（Proof-of-Work，工作量证明）"><a href="#PoW（Proof-of-Work，工作量证明）" class="headerlink" title="PoW（Proof of Work，工作量证明）"></a>PoW（Proof of Work，工作量证明）</h5><p>PoW 机制的大致流程如下：</p>
+<ol>
+<li>向所有节点广播新交易和一个数学问题</li>
+<li>最先解决了数学问题的节点将交易打包成区块，对全网广播</li>
+<li>其他节点验证广播区块的节点是否解决了数学问题（完成了一定的工作量），验证通过则接受该区块，并将该区块的哈希值放入下一个区块中，表示承认该区块</li>
+</ol>
+<p>由于在 PoW 机制中，区块的产生需要解决一个数学问题，也就是所谓的<strong>挖矿</strong>，这往往要消耗较大的算力和电力，因此节点们倾向于在<strong>最长的链</strong>的基础上添加区块，因为如果节点想在自己的链上添加新的区块，那么就需要重新计算 1 个或 $n$ 个这样的数学问题（每添加一个区块就需要计算一个）。因此在比特币中最长的链被认为是合法的链，这样节点间就形成了一套“共识”。</p>
+<p>PoW 机制的优点是完全去中心化，缺点是需要依赖数学运算，资源的消耗会比其他的共识机制高，可监管性弱，同时每次达成共识需要全网共同参与运算，性能较低。</p>
+<h5 id="PoS（Proof-of-Stack，股权证明）"><a href="#PoS（Proof-of-Stack，股权证明）" class="headerlink" title="PoS（Proof of Stack，股权证明）"></a>PoS（Proof of Stack，股权证明）</h5><p>PoS 针对 PoW 的缺点做出了改进。PoS 要求参与者预先放置一些货币在区块链上用于换取“股权”，从而成为<strong>验证者（Validator）</strong>，验证者具有产生区块的权利。PoS 机制会按照存放货币的量和时间给验证者分配相应的利息，同时还引入了奖惩机制，打包错误区块的验证者将失去他的股权——即投入的货币以及产生区块的权利。PoS 机制的大致流程如下：</p>
+<ol>
+<li>加入 PoS 机制的都是持币人，称为验证者</li>
+<li>PoS 算法根据验证者持币的多少在验证者中挑选出一个给予产生区块的权利</li>
+<li>如果一定时间内没有产生区块，PoS 就挑选下一个验证者，给予产生区块的权利</li>
+<li>如果某个验证者打包了一份欺诈性交易，PoS 将剥夺他的股权</li>
+</ol>
+<p>PoS 的优点在于：</p>
+<ol>
+<li>引入了利息，使得像比特币这样发币总数有限的通货紧缩系统在一定时间后不会“无币可发”</li>
+<li>引入了奖惩机制使节点的运行更加可控，同时更好地防止攻击</li>
+<li>与 PoW 相比，不需要为了生成新区块而消耗大量电力和算力</li>
+<li>与 PoW 相比，缩短了达成共识所需的时间</li>
+</ol>
+<p>由于 PoS 机制需要用户已经持有一定数量的货币，没有提供在区块链应用创立初始阶段处理数字货币的方法，因此使用 PoS 机制的区块链应用会在发布时预先出售货币，或在初期采用 PoW，让矿工获得货币后再转换成 PoS，例如以太坊现阶段采用的是 PoW 机制，在第四阶段“宁静”（Serenity）中将过渡到 PoS。</p>
+<h5 id="拜占庭将军问题（Byzantine-Generals-Problem）"><a href="#拜占庭将军问题（Byzantine-Generals-Problem）" class="headerlink" title="拜占庭将军问题（Byzantine Generals Problem）"></a>拜占庭将军问题（Byzantine Generals Problem）</h5><p>拜占庭将军问题是分布式网络中的通信容错问题，可以描述为：</p>
+<blockquote>
+<p>一组拜占庭将军各领一支队伍共同围困一座城市。各支军队的行动策略限定为进攻或撤离两种。因为部分军队进攻而部分军队撤离可能会造成灾难性的后果，因此各将军决定通过投标来达成一致策略，即“共进退”。因为各将军位于城市不同方向，他们只能通过信使互相联系。在投票过程中每位将军都将自己的选择（进攻或撤退）通过信使分别通知其他所有将军，这样一来每位将军根据自己的投票和其他所有将军送来的信息就可以知道共同投票的结果，进而做出行动。</p>
+</blockquote>
+<center class="half">
+    <img src="/2021/03/17/task1-qu-kuai-lian-jian-jie-yu-yi-tai-fang-ru-men-jie-shao/image1.png" width="500">
+</center>
+
+
+
+
+<p>拜占庭将军的问题在于，将军中可能出现叛徒。假设3名将军中有1名叛徒，2名忠诚将军一人投进攻票，一人投撤退票，这时叛徒可能会故意给投进攻的将军投进攻票，而给投撤退的将军投撤退票。这就导致一名将军带队发起进攻，而另外一名将军带队撤退。</p>
+<p>另外，由于将军之间通过信使进行通讯，即使所有将军都忠诚，也不能排除信使被敌人截杀，甚至信使叛变等情况。</p>
+<p>假设存在叛变将军或信使出问题等情况，如果忠诚将军仍然能够通过投票来决定他们的战略，便称系统达到了<strong>拜占庭容错（Byzantine Fault Tolerance）</strong>。</p>
+<p>拜占庭问题对应到区块链中，将军就是节点，信使就是网络等通信系统，要解决的是存在恶意节点、网络错误等情况下系统的一致性问题。</p>
+<p><strong>PBFT（Practical Byzantine Fault Tolerance）</strong> 是第一个得到广泛应用且比较高效的拜占庭容错算法，能够在节点数量不小于 $n=3f+1$ 的情况下容忍 $f$ 个拜占庭节点（恶意节点）。</p>
+<h2 id="1-4、区块链的分叉"><a href="#1-4、区块链的分叉" class="headerlink" title="1.4、区块链的分叉"></a>1.4、区块链的分叉</h2><p>即使区块链是可靠的，现在还有一个问题没有解决：如果两个人同时向区块链写入数据，也就是说，同时有两个区块加入，因为它们都连着前一个区块，就形成了分叉。这时应该采纳哪一个区块呢？</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017122709.png" alt=""></p>
+<p>现在的规则是，新节点总是采用最长的那条区块链。如果区块链有分叉，将看哪个分支在分叉点后面，先达到6个新区块（称为”六次确认”）。按照10分钟一个区块计算，一小时就可以确认。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017122710.png" alt=""></p>
+<p>由于新区块的生成速度由计算能力决定，所以这条规则就是说，拥有大多数计算能力的那条分支，就是正宗的区块链。</p>
+<h2 id="1-5、总结"><a href="#1-5、总结" class="headerlink" title="1.5、总结"></a>1.5、总结</h2><p>区块链作为无人管理的分布式数据库，从2009年开始已经运行了12年，没有出现大的问题。这证明它是可行的。</p>
+<p>但是，为了保证数据的可靠性，区块链也有自己的代价。一是效率，数据写入区块链，最少要等待十分钟，所有节点都同步数据，则需要更多的时间；二是能耗，区块的生成需要矿工进行无数无意义的计算，这是非常耗费能源的。</p>
+<p>因此，区块链的适用场景，其实非常有限。</p>
+<blockquote>
+<ol>
+<li>不存在所有成员都信任的管理当局</li>
+<li>写入的数据不要求实时使用</li>
+<li>挖矿的收益能够弥补本身的成本</li>
+</ol>
+</blockquote>
+<p>如果无法满足上述的条件，那么传统的数据库是更好的解决方案。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017122711.png" alt=""></p>
+<h1 id="二、以太坊介绍"><a href="#二、以太坊介绍" class="headerlink" title="二、以太坊介绍"></a>二、以太坊介绍</h1><h2 id="2-1、以太坊简介"><a href="#2-1、以太坊简介" class="headerlink" title="2.1、以太坊简介"></a>2.1、以太坊简介</h2><p>以太坊是一个开放的<code>区块链平台</code>，允许任何人在平台中建立和使用通过区块链技术运行的去中心化应用，同比特币一样，以太坊由全球范围的很多人共同创建，不受任何个人控制。</p>
+<h3 id="2-1-1、下一代区块链"><a href="#2-1-1、下一代区块链" class="headerlink" title="2.1.1、下一代区块链"></a>2.1.1、下一代区块链</h3><p>区块链技术是比特币的底层技术。在比特币中，分布式数据库被设想为一个<code>账户余额表（总账）</code>，交易通过比特币的转移来实现个体之间无需信任基础的金融活动。以太坊试图实现一个总体上完全无需信任基础的智能合约平台。</p>
+<h3 id="2-1-2、以太坊虚拟机"><a href="#2-1-2、以太坊虚拟机" class="headerlink" title="2.1.2、以太坊虚拟机"></a>2.1.2、以太坊虚拟机</h3><p>以太坊是<code>可编程</code>的区块链，不会给用户一系列预先设置好的操作，允许用户自定义复杂的操作。以太坊狭义上是指一系列定义去中心化应用平台的协议，核心是<code>以太坊虚拟机（EVM）</code>，其可以执行任意复杂算法的编码。以太坊是<code>图灵完备</code>的。</p>
+<p>以太坊也有一个点对点的网络协议，以太坊区块链数据库由各网络节点来维护和更新，每个节点运行以太坊虚拟机并执行相同的指令，保证区块链的一致性。</p>
+<h3 id="2-1-3、以太坊工作原理"><a href="#2-1-3、以太坊工作原理" class="headerlink" title="2.1.3、以太坊工作原理"></a>2.1.3、以太坊工作原理</h3><p>比特币可以看作是关于交易的列表，而以太坊的基础单元是<code>账户</code>。以太坊跟踪每个账户的状态，以太坊上所有状态转换都是账户之间价值和信息的转换。</p>
+<p>账户分为两类：</p>
+<ul>
+<li>外部账户（EOA）：由私人密钥控制</li>
+<li>合约账户：由合约代码控制，只能由外部账户“激活”。</li>
+</ul>
+<p><code>智能合约</code>：指合约账户中的编码，即交易被发送给该账户时所运行的程序。用户可以通过在区块链中部署编码来创建新的合约。</p>
+<p>只有当外部账户发出指令时，合约账户才会执行相应的操作，是为了保证正确执行所有操作。</p>
+<p>和比特币一样，以太坊用户需要向网络支付少量的交易费用，通过<code>以太币</code>的形式支付。这样避免受到类似DDos的攻击。</p>
+<p>交易费用由节点收集，节点使网络生效。“矿工”就是以太坊网络中收集、传播、确认和执行交易的节点。矿工将交易打包，打包的数据成为区块，打包的过程就是将以太坊中<code>账户的状态</code>更新的过程。矿工们相互竞争挖矿，成功挖矿的可以得到以太币的奖励。</p>
+<h3 id="2-1-4、幽灵协议"><a href="#2-1-4、幽灵协议" class="headerlink" title="2.1.4、幽灵协议"></a>2.1.4、幽灵协议</h3><p>幽灵合约的英文是“Greedy Heaviest Observed Subtree” (GHOST) protocol，在介绍幽灵协议之前，先介绍以太坊中的叔区块、叔块奖励和叔块引用奖励这三个概念。</p>
+<center class="half">
+    <img src="/2021/03/17/task1-qu-kuai-lian-jian-jie-yu-yi-tai-fang-ru-men-jie-shao/image5.png" width="400">
+</center>
+
+
+
+
+<p>假设目前以太坊区块链中的区块高度（区块链上的区块个数）为6，现在产生了一笔新的交易，矿工A先将该笔交易打包成了区块 Block 7，在矿工A将 Block 7 广播到其他节点的这段时间里，矿工B和矿工C又分别产生了 Block 8 和 Block 9。Block 7、Block 8、Block 9 都指向 Block 6，即 Block 6 是他们的父区块。由于 Block 7 是最先产生的，因此 Block 7 被认为是有效区块，Block 8 和 Block 9 就是<strong>叔区块</strong>（作废区块）。</p>
+<center class="half">
+    <img src="/2021/03/17/task1-qu-kuai-lian-jian-jie-yu-yi-tai-fang-ru-men-jie-shao/image6.png" width="300">
+</center>
+
+
+
+
+<p>现在链上的区块高度为7，在这基础上又产生了新的交易，并被打包成了 Block 10。在以太坊中，Block 10 除了可以引用它的父区块 Block 7 外，还可以引用叔区块 Block 8 和 Block 9。并且，Block 8 和 Block 9 的矿工会因此获得一笔奖励，称为<strong>叔块奖励</strong>，Block 10 的矿工除了基础奖励之外，由于引用了叔区块，还会获得一笔额外的<strong>叔块引用奖励</strong>。</p>
+<p><strong>幽灵协议</strong>是以太坊的一大创新。由于在比特币中的出块时间被设计为10分钟，而以太坊为了提高出块速度，将出块时间设计为12秒（实际14~15秒左右），这样的高速出块意味着高速确认，高速确认会带来区块的<strong>高作废率</strong>和<strong>低安全性</strong>。因为区块需要花一定的时间才能广播至全网，如果矿工 A 挖出了一个区块，而矿工 B 碰巧在 A 的区块扩散至 B 之前挖出了另一个区块，矿工 B 的区块就会作废并且没有对区块链的网络安全做出贡献。此外，这样的高速确认还会带来<strong>中心化</strong>的问题：如果 A 拥有全网 30% 的算力而 B 拥有 10% 的算力，那么 A 将会在 70% 的时间内都在产生作废区块，而 B 在 90% 的时间内都在产生作废区块，这样，B 永远追不上 A，后果是 A 通过其算力份额拥有对挖矿过程实际上的控制权，出现了算力垄断，弱化了去中心化。</p>
+<p>幽灵协议正是为了解决上述问题而引入的，协议的主要内容如下：</p>
+<ul>
+<li>计算最长链时，不仅包括当前区块的父区块和祖区块，还包括祖先块的作废的后代区块（叔区块），将它们综合考虑来计算哪一个区块拥有支持其的最大工作量证明。这解决了网络安全性的问题</li>
+<li>以太坊付给以“叔区块”身份为新块确认作出贡献的废区块87.5%的奖励（叔块奖励），把它们纳入计算的“侄子区块”将获得奖励的12.5%（叔块引用奖励）。这就使得即使产生作废区块的矿工也能够参与区块链网络贡献并获得奖励，解决了中心化倾向的问题</li>
+<li>叔区块最深可以被其父母的第二代至第七代后辈区块引用。这样做是为了：<ul>
+<li>降低引用叔区块的计算复杂性</li>
+<li>过多的叔块引用奖励会剥夺矿工在主链上挖矿的激励，使得矿工有转向公开攻击者链上挖矿的倾向（即公开攻击者可能会恶意产生大量作废区块，无限引用将会诱使矿工转移到攻击者的链上，从而抛弃合法的主链）</li>
+<li>计算表明带有激励的五层幽灵协议即使在出块时间为15s的情况下也实现了了95%以上的效率，而拥有25%算力的矿工从中心化得到的益处小于3%</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-1-5、以太坊的组成部分"><a href="#2-1-5、以太坊的组成部分" class="headerlink" title="2.1.5、以太坊的组成部分"></a>2.1.5、以太坊的组成部分</h3><p>在以太坊中，包括了 P2P 网络、共识机制、交易、状态机、客户端这几个组成部分。</p>
+<ul>
+<li>P2P 网络：在以太坊主网上运行，可通过TCP端口30303访问，并运行称为 ÐΞVp2p 的协议。</li>
+<li>共识机制：以太坊目前使用名为 Ethash 的 POW 算法，计划在将来会过渡到称为 Casper 的 POS 算法。</li>
+<li>交易：以太坊中的交易本质上是网络消息，包括发送者、接收者、值和数据载荷（payload）。</li>
+<li>状态机：以太坊的状态转移由以太坊虚拟机（Ethereum Virtual Machine，EVM）处理，EVM 能够将智能合约编译成机器码并执行。</li>
+<li>客户端：用于用户和以太坊进行交互操作的软件实现，最突出的是 Go-Ethereum(Geth) 和 Parity。</li>
+</ul>
+<h3 id="2-1-6、以太坊中的概念"><a href="#2-1-6、以太坊中的概念" class="headerlink" title="2.1.6、以太坊中的概念"></a>2.1.6、以太坊中的概念</h3><ul>
+<li>账户：以太坊中的账户类似于银行账户、应用账户，每个账户有一个20字节的地址。账户又分为<strong>普通账户</strong>（又叫外部账户，External Owned Account, EOA）和<strong>合约账户</strong>（Contract）。普通账户是由以太坊使用者创建的账户，包含地址、余额和随机数；合约账户是创建智能合约时建立的账户，包含存储空间和合约代码</li>
+<li>状态：状态是由账户和两个账户之间价值的转移以及信息的状态转换构成的</li>
+<li>地址：地址是一个账户 ECDSA 公钥的 Keccak 散列最右边的160位，通过地址可以在以太坊上接收或发送交易。在 Etherscan 上，可以通过地址来查询一个账户的信息</li>
+<li>交易：以太坊中的交易不仅包括发送和接收以太币，还包括向合约账户发送交易来调用合约代码、向空用户发送交易来生成以交易信息为代码块的合约账户</li>
+<li>Gas：Gas 是以太坊中的一种机制，用于执行智能合约或交易操作的虚拟燃料。由于以太坊是图灵完备的，为了避免开发者无意或恶意编写出死循环等浪费资源或滥用资源的情况，以太坊中的每一笔交易都需支付一定的 Gas （燃料费），即需支付一定的以太币作为 Gas。Gas 的金额通常是由交易的发起者指定并支付的</li>
+<li>挖矿：和比特币类似，以太坊同样通过挖矿来产生区块。在以太坊目前的 PoW 机制下，每当一笔交易发出并广播，就会吸引矿工来将该交易打包成区块。每产生一个区块都会有一笔<strong>固定奖励</strong>给矿工，目前的固定奖励是3个以太。同时，区块中所有操作所需的 Gas 也会作为奖励给矿工。与比特币不同的是，以太坊中产生叔块的矿工可能会获得叔块奖励，引用叔块的矿工会获得叔块引用奖励</li>
+<li>DApp（去中心化应用）：通过智能合约，开发者能够设计想要的逻辑，相当于是网站的后端。而 DApp 则相当于是一个完整的网站（前端+后端），因此 DApp = 智能合约 + Web 前端。以太坊提供了一个名为 web3.js 的 Javascript 库，通过 web3.js 可以实现 Web 与以太坊区块链的交互和与智能合约的交互，方便开发者创建 DApp</li>
+</ul>
+<h2 id="2-2、以太坊账户管理"><a href="#2-2、以太坊账户管理" class="headerlink" title="2.2、以太坊账户管理"></a>2.2、以太坊账户管理</h2><h3 id="2-2-1、账户"><a href="#2-2-1、账户" class="headerlink" title="2.2.1、账户"></a>2.2.1、账户</h3><p>以太坊有两种账户类型：</p>
+<ul>
+<li>外部账户（EOA）</li>
+<li>合约账户</li>
+</ul>
+<p>所有账户的状态代表以太坊网络的状态，以太坊网络会和每一个区块一起更新，网络需要达成关于以太坊的共识。账户代表外部代理人的身份，账户运用非对称加密的私钥来签署交易，以便以太坊虚拟机可以安全验证交易发送者的身份。</p>
+<h3 id="2-2-2、钥匙文件-Keyfiles"><a href="#2-2-2、钥匙文件-Keyfiles" class="headerlink" title="2.2.2、钥匙文件(Keyfiles)"></a>2.2.2、钥匙文件(Keyfiles)</h3><p>每个账户都由一对密钥来定义，包括公钥和私钥。账户以地址为索引，地址由公钥生成，每对私钥/地址都编码在一个钥匙文件（JSON文件）中，其中最重要的为账户私钥，通常用创建账户时的密码加密。可以在以太坊节点数据目录的<code>keystore</code>子目录下找到钥匙文件。</p>
+<h3 id="2-2-3、创建账户"><a href="#2-2-3、创建账户" class="headerlink" title="2.2.3、创建账户"></a>2.2.3、创建账户</h3><p>为了从账户发送交易包括以太币，需要拥有<code>Keyfiles</code>和密码。需要记住并备份钥匙文件，没有“找回密码”的选项。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://github.com/datawhalechina/team-learning-program/blob/master/Blockchain/part1_%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%BB%8B%E7%BB%8D.md">DataWhale 区块链教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2017/12/blockchain-tutorial.html">区块链入门教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html">RSA算法原理（一）</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2013/07/rsa_algorithm_part_two.html">RSA算法原理（二）</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2018/01/bitcoin-tutorial.html">比特币入门教程</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2006/12/notes_on_cryptography.html">密码学笔记</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html">数字签名是什么？</a></p>
+<p><a target="_blank" rel="noopener" href="https://medium.freecodecamp.org/how-does-blockchain-really-work-i-built-an-app-to-show-you-6b70cd4caf7d">How does blockchain really work?</a>, by Sean Han</p>
+<p><a target="_blank" rel="noopener" href="http://www.righto.com/2014/02/bitcoin-mining-hard-way-algorithms.html">Bitcoin mining the hard way: the algorithms, protocols, and bytes</a>, by Ken Shirriff</p>
+<p><a target="_blank" rel="noopener" href="https://azhuge233.com/merkle-tree%E5%8F%8A%E5%85%B6%E5%AE%9E%E7%8E%B0/">Merkle Tree及其实现</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.huweihuang.com/blockchain-notes/ethereum/ethereum-introduction.html">以太坊系列（一）之以太坊介绍</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.huweihuang.com/blockchain-notes/ethereum/ethereum-account-management.html">以太坊系列（二）之账户管理</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.huweihuang.com/">胡伟煌个人博客</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Terence Cai</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://terence1023.github.io/2021/03/17/task1-qu-kuai-lian-jian-jie-yu-yi-tai-fang-ru-men-jie-shao/">http://terence1023.github.io/2021/03/17/task1-qu-kuai-lian-jian-jie-yu-yi-tai-fang-ru-men-jie-shao/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Terence Cai</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/DataWhale/">
+                                    <span class="chip bg-color">DataWhale</span>
+                                </a>
+                            
+                                <a href="/tags/BlockChain/">
+                                    <span class="chip bg-color">BlockChain</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/03/18/task2-wide-deep/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Task2 Wide&amp;Deep">
+                        
+                        <span class="card-title">Task2 Wide&amp;Deep</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Terence Cai
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/DataWhale/">
+                        <span class="chip bg-color">DataWhale</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/16/task1-deepcrossing/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Task1 DeepCrossing">
+                        
+                        <span class="card-title">Task1 DeepCrossing</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Terence Cai
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/DataWhale/">
+                        <span class="chip bg-color">DataWhale</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5020506940"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">Terence Cai</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">141.3k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/terence1023" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:992823930@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=992823930" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 992823930" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,1736 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="YOLO 专栏, Terence">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>YOLO 专栏 | Terence</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Terence</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Terence</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/terence1023" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/terence1023" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">YOLO 专栏</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-01-30
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-01-30
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    29 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="实时目标检测方法-YOLO-—-从-V1-到-V4"><a href="#实时目标检测方法-YOLO-—-从-V1-到-V4" class="headerlink" title="实时目标检测方法 YOLO — 从 V1 到 V4"></a>实时目标检测方法 YOLO — 从 V1 到 V4</h1><p>Apr 25, 2020 in <a target="_blank" rel="noopener" href="https://tangh.github.io/categories/Computer-Science/">Computer Science</a>, <a target="_blank" rel="noopener" href="https://tangh.github.io/categories/Computer-Science/Deep-Learning/">Deep Learning</a></p>
+<p>目前真正能实时（30fps 以上）的目标检测算法效果最好的可能就是 YOLO 了，本文注重它从五年前最初版本到前两天公布的 v4 版本的进化过程，会涉及到很多其它关联算法，希望能说清楚算法流程。此文不会对各种 ablation experiment 有分析，这种实验结果类的应当去看原文，只会提及 mAP 等关键数据；对于 related work 中 YOLO 没有使用的，也不会提到，这也应该去看原文。</p>
+<p><strong>论文地址：</strong></p>
+<ol>
+<li>V1，CVPR2016：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1506.02640">https://arxiv.org/abs/1506.02640</a></li>
+<li>V2，CVPR2017：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1612.08242">https://arxiv.org/abs/1612.08242</a></li>
+<li>V3：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1804.02767">https://arxiv.org/abs/1804.02767</a></li>
+<li>V4：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2004.10934">https://arxiv.org/abs/2004.10934</a></li>
+<li>作者网站：<a target="_blank" rel="noopener" href="https://pjreddie.com/，上面有一些">https://pjreddie.com/，上面有一些</a> slides、oral 视频、审稿 review</li>
+<li>代码：<a target="_blank" rel="noopener" href="https://github.com/AlexeyAB/darknet，官方代码是">https://github.com/AlexeyAB/darknet，官方代码是</a> C/CUDA 写的，除了 OpenCV 不依赖任何第三方库，包括现代的 tensor 库比如 TensorFlow、PyTorch 这些，它本身就是一个框架</li>
+</ol>
+<p>下个月应该会把一个两年前做的 R-CNN 系列的 slides 放上来（已更新至 <a target="_blank" rel="noopener" href="https://docs.google.com/presentation/d/1N2H12L0XVV-s0FuxcyHAcG0CFNujHxuWneObr8o7CAE/edit?usp=sharing">Google Presentation</a>），这样双极网络和单级网络的代表算法系列就齐活了。当然去年以来有一些很重要的 Anchor Free 的算法，虽然也可以划分为双极和单级，但其实挺大区别的，大致它们都是关键点检测的思想用了进来。</p>
+<p>下面的图来自 YOLOv4 的论文，检测的各个步骤和相应研究，我觉得分地挺好的。</p>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-detection-steps.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-detection-steps.png" alt="object detection steps"></a><em>object detection steps</em></p>
+<p>通常而言，单级网络去除了 Proposals 的生成过程，直接由预设好的 Anchors 加上回归值（SSD），或者网络直接预测框的中心和宽高（YOLO），来给出图像内 BBox 的位置。且单级网络没有特征重采样的过程，始终是一个密集预测，这使得一些平衡正负样本或其它作用的采样方式无法使用。</p>
+<p>此外，在两级网络中，对于一个位置上的一组 Anchors 或者一组 Proposals 的 类别 和 回归值，通常是由两个并行的全连接层分支给出的；而单级网络中，类别 和 Anchor 的回归值（或 BBox 的宽高）一般直接由一个预测卷积层给出，类别和回归值按照一定次序排列在输出特征的特定通道中。且通常一个点上只有一个位置预测，而不像两级网络一样，一个点上多个类别有对应的多个位置预测。</p>
+<h1 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Overview">Overview</a></li>
+<li>You Only Look Once: Unified, Real-Time Object Detection<ol>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Architecture">Architecture</a></li>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Training-and-Inference">Training and Inference</a></li>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Summary-and-Results">Summary and Results</a></li>
+</ol>
+</li>
+<li>YOLO9000: Better, Faster, Stronger<ol>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Architecture-1">Architecture</a></li>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Train-YOLOv2">Train YOLOv2</a></li>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Summary">Summary</a></li>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Joint-train-on-object-detection-and-classification-YOLO9000">Joint train on object detection and classification (YOLO9000)</a></li>
+</ol>
+</li>
+<li>YOLOv3: An Incremental Improvement<ol>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Network">Network</a></li>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Other-Improvements">Other Improvements</a></li>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Results">Results</a></li>
+</ol>
+</li>
+<li>YOLOv4: Optimal Speed and Accuracy of Object Detection<ol>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Bag-of-freebies">Bag of freebies</a></li>
+<li><a target="_blank" rel="noopener" href="https://tangh.github.io/articles/yolo-from-v1-to-v4/#Bag-of-specials">Bag of specials</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>以下速度数据均在 Titan X (Maxwell) 上测试，Tesla M40 基本是相同的 GPU。新一代构架的是 Titan X (Pascal)、Titan Xp、GTX 1080 Ti、Tesla P100 这些。Titan Volta (Titan V)、Tesla V100 是更加新一代。再就到目前的 Turing，Titan RTX 这些。</p>
+<p>在 Pascal VOC 07 test 上，使用 07+12 训练</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>速度（fps）</th>
+<th>精度（mAP）</th>
+<th>输入尺寸</th>
+<th>网络结构</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YOLOv1</td>
+<td>45</td>
+<td>63.4%</td>
+<td>448 × 448</td>
+<td>Darknet-24</td>
+</tr>
+<tr>
+<td>Fast YOLOv1</td>
+<td>155</td>
+<td>52.7%</td>
+<td>448 × 448</td>
+<td>Darknet-9</td>
+</tr>
+<tr>
+<td>YOLOv2</td>
+<td>40</td>
+<td>78.6%</td>
+<td>544 × 544</td>
+<td>Darknet-19</td>
+</tr>
+<tr>
+<td>YOLOv2</td>
+<td>59</td>
+<td>77.8%</td>
+<td>480 × 480</td>
+<td>Darknet-19</td>
+</tr>
+<tr>
+<td>YOLOv2</td>
+<td>67</td>
+<td>76.8%</td>
+<td>416 × 416</td>
+<td>Darknet-19</td>
+</tr>
+<tr>
+<td>YOLOv2</td>
+<td>81</td>
+<td>73.7%</td>
+<td>352 × 352</td>
+<td>Darknet-19</td>
+</tr>
+<tr>
+<td>YOLOv2</td>
+<td>91</td>
+<td>69.0%</td>
+<td>288 × 288</td>
+<td>Darknet-19</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>在 Pascal VOC 12 test 上，使用 07++12（即含 07 test）训练</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>速度（fps）</th>
+<th>精度（mAP）</th>
+<th>输入尺寸</th>
+<th>网络结构</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YOLOv1</td>
+<td>45</td>
+<td>57.9%</td>
+<td>448 × 448</td>
+<td>Darknet-24</td>
+</tr>
+<tr>
+<td>YOLOv2</td>
+<td>–</td>
+<td>73.4%</td>
+<td>–</td>
+<td>Darknet-19</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>在 MS COCO test-dev 上，使用 2017 split (trainval35k) 训练</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>速度（fps）</th>
+<th>精度（mAP）</th>
+<th>精度（mAP 50）</th>
+<th>输入尺寸</th>
+<th>网络结构</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YOLOv2</td>
+<td>–</td>
+<td>21.6%</td>
+<td>44.0%</td>
+<td>–</td>
+<td>Darknet-19</td>
+</tr>
+<tr>
+<td>YOLOv3</td>
+<td>19.6</td>
+<td>33.0%</td>
+<td>57.9%</td>
+<td>608 × 608</td>
+<td>Darknet-53</td>
+</tr>
+<tr>
+<td>YOLOv3</td>
+<td>34.5</td>
+<td>31.0%</td>
+<td>55.3%</td>
+<td>416 × 416</td>
+<td>Darknet-53</td>
+</tr>
+<tr>
+<td>YOLOv3</td>
+<td>45.5</td>
+<td>28.2%</td>
+<td>51.5%</td>
+<td>320 × 320</td>
+<td>Darknet-53</td>
+</tr>
+<tr>
+<td>YOLOv4</td>
+<td>23</td>
+<td>43.5%</td>
+<td>65.7%</td>
+<td>608 × 608</td>
+<td>CSPDarknet-53</td>
+</tr>
+<tr>
+<td>YOLOv4</td>
+<td>31</td>
+<td>43.5%</td>
+<td>64.9%</td>
+<td>512 × 512</td>
+<td>CSPDarknet-53</td>
+</tr>
+<tr>
+<td>YOLOv4</td>
+<td>38</td>
+<td>43.5%</td>
+<td>62.8%</td>
+<td>416 × 416</td>
+<td>CSPDarknet-53</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="You-Only-Look-Once-Unified-Real-Time-Object-Detection"><a href="#You-Only-Look-Once-Unified-Real-Time-Object-Detection" class="headerlink" title="You Only Look Once: Unified, Real-Time Object Detection"></a>You Only Look Once: Unified, Real-Time Object Detection</h1><p>思想：缩放图片一次通过卷积神经网络同时得出位置和类别，这样速度快、中间步骤简单、基于一整张图所有信息而不是每个 Proposal 中部分信息进行检测。</p>
+<h2 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h2><p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-prediction-model.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-prediction-model.png" alt="YOLO prediction model"></a><em>YOLO prediction model</em></p>
+<p>YOLO 的检测方法是将输入图划分成 S×S 个格子（Grid），每一个格子预测出 B 个框。如果一个物体的中心落在某一个格子内部，那么这个格子负责预测这个物体。一个格子首先要预测它负责预测的物体的类别概率，这是一个长度为 Class (C) 的数组。此外，对于一个格子内的每个框，都还要预测另外的 5 个值 <code>x, y, w, h, Pr*IoU</code>，前两个值 <code>x, y ∈ [0, 1]</code> 表示框的中心点相对于这个格子的偏移，<code>w, h</code> 表示这个框在原图尺寸上的宽长（相对值，归一化到 <code>[0, 1]</code>）。这样得到预测值之后，先应用偏移 <code>x, y</code> 找到框的中心点，再通过 <code>w, h</code> 即可作出一个框。最后一个值 <code>confidence = Pr(Object)*IoU</code> 表示框内有物体的概率乘以这个框和 GT 之间的 IoU，也就是说，如果这个框对应的是背景，那么这个值应该是 <code>0</code>，如果这个框对应的是前景，那么这个值应该是与对应前景 GT 的 IoU。</p>
+<p>从上面我们可以看出：</p>
+<ul>
+<li>YOLO 所需要的整个输出为一个 <code>S × S × (B*5 + C)</code> 的 tensor，且这里 C 是前景的类别数，无需加上背景一类（例如对于 Pascal VOC，C=20）。它无需两级检测网络的两个全连接分开输出类别和位置，也无需 Proposals 生成、特征重采样等过程。实验中，S=7，B=2。</li>
+<li>每个格子预测的长度为 Class 的概率是一个条件概率，是在有物体下的概率，即 <code>Pr(Class_i|Object)</code>，所以在预测的时候，把这个和每个框内预测的概率相乘 <code>Pr(Class_i|Object) * Pr(Object) * IoU = Pr(Class_i) * IoU</code> 就得到对每个框的逐类别概率。这里与 R-CNN 等两级网络不同之处在于，两级网络中一般使用 C+1 类判断前背景，而 YOLO 使用框内一个额外概率值判断前背景。</li>
+<li>得到的条件概率的意思是，以上图 class probability map 为例，每个格子取输出 tensor 对应的向量中的 class 分数的最大值对应的类别，就可以得到此图。最下方的红色是 C=20 类中的一个类别，假设代表「飞机」。但是它并不表示这个格子就是「飞机」，而是，如果这个格子内有物体，那么这个格子内的物体的类别是「飞机」。而有没有物体，需要看上方图的 confidence，经提醒，这个图内的 98 个框（位置和大小反映 <code>x, y, w, h</code>）的粗细可能就代表这个 confidence 分数，只有 confidence 大的框，才认为里面有物体。</li>
+</ul>
+<p>下面看得到这个输出 tensor 的网络结构，YOLO 系列用了一个自创的网络结构，叫做 darknet，灵感源于 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1409.4842">GoogLeNet (Inception V1)</a>。在 YOLOv1 中，它有 24 层卷积层（加上 4 个池化层和 2 个全连接层），结构图如下。</p>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-darknet-24.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-darknet-24.png" alt="Darknet-24 (Unofficial name) Architecture"></a><em>Darknet-24 (Unofficial name) Architecture</em></p>
+<p>这里没有使用 Inception Module，但是使用了同样的减少计算量的方法，即先用 1 × 1 reduction layer，再使用 3 × 3 convolutional layer。可以简单计算一下，在 1024 × 14 × 14 层，如果直接使用 1024 × 1024 × 3 × 3 卷积，计算量为 <code>(1024 × 14 × 14) × (1024 × 3 × 3) = 1849.7M</code>。而如果像图上结构一样先降维（可以理解为非线性映射到低维空间，可能联想到 PCA 虽然它是线性的）再卷积，计算量为 <code>(512 × 14 × 14) × (1024 × 1 × 1) + (1024 × 14 × 14) × (512 × 3 × 3) = 102.7M + 924.8M = 1027.5M</code>，接近于小到一半。这种 bottleneck 结构在现代 backbone 上很常见。</p>
+<p>对于激活层，最后一层使用的是线性激活函数，其它层使用的是 leaky ReLU，<code>f(x) = 0.1x when x&lt;0</code>。</p>
+<h2 id="Training-and-Inference"><a href="#Training-and-Inference" class="headerlink" title="Training and Inference"></a>Training and Inference</h2><p>首先在 ImageNet 上预训练前 20 层卷积，把后面替换为一个平均池化层和一个全连接层，输入尺寸为 224 × 224。训练好后改为 4 个卷积层和 2 个全连接层，输入尺寸改为 448 × 448。</p>
+<p>Loss 函数选择为 sum-squared error，SSE=∑i(xi−x^)2。这有几个不平衡的问题：</p>
+<ol>
+<li>位置预测和类别预测是相等权重的；</li>
+<li>对于不含任何物体的格子，即负样本总是多于正样本的，所以 confidence 分数（每个 BBox 的第五个预测参数）会趋向于 <code>0</code>；</li>
+<li>大物体和小物体位置预测错误的权重是相等的，对于大物体，相同数量的位置偏移在 Loss 上的反映应当小于小物体的，因为对于 IoU 的影响会更小。</li>
+</ol>
+<p>对于前两个问题，通过增加权重 λcoord=5, λnoobj=.5 来解决。第三个问题，通过预测 BBox 宽高的平方根来解决。</p>
+<p>还有一个关于 GT 的问题是，一个格子负责预测中心点落在其内的物体，但一个格子预测了 B 个 BBox，我们只希望一个 BBox Predictor 负责一个物体。所以在训练时，只有预测出的框的与 GT 的 IoU 最大的那个 BBox 认为是有物体的（正样本）。所以这里与 R-CNN 系列两级网络不同，在那里一个 GT 是可以匹配到多个预测框的。作者这么设计意图是让每个 Predictor 专门化，专注于一种尺寸、长宽比或类别的物体。</p>
+<p>整个损失函数如下：</p>
+<p>λcoord∑i=0S2∑j=0BIijobj⋅([(xi−x^i)2+(yi−y^i)2]+[(wi−w^i)2+(hi−h^i)2])+∑i=0S2∑j=0BIijobj⋅(Ci−C^i)2+λnoobj∑i=0S2∑j=0BIijnoobj⋅(Ci−C^i)2+∑i=0S2Iiobj∑c∈classes(pi(c)−p^i(c))2</p>
+<p>公式中第一行是 BBox 的位置和大小；第二行是 BBox 内的 <code>Pr*IoU</code>；第三行是每个格子内的类别概率，可以看到只有格子内有物体时才有这项 loss，这与之前的条件概率是对应的。Icondition 表示如果 <code>condition</code>，那么这个值为 <code>1</code>，否则为 <code>0</code>。</p>
+<p><strong>训练细节：</strong></p>
+<ol>
+<li>epochs = 135，batch size = 64，momentum = 0.9，weight decay = 0.0005。</li>
+<li>lr：第一个 epoch 从 10e-3 增加到 10e-2，继续保持 75 个 epochs，然后 10e-3 训练 30 个 epochs，最终 10e-4 训练 30 个 epochs。</li>
+<li>第一个全连接层后加了一个 <code>.5</code> 的 Dropout 层防止过拟合。数据增强：20% 尺度的随机 translation 和 scaling，在 HSV 空间中 1.5x 的曝光和饱和度调整。</li>
+</ol>
+<p>对于测试，YOLO 设计为预测 98 个框，使用每个框内的第五个预测值决定是否留下这个框，类别使用格子预测的类别。对于一些大的物体，可能在多个格子内都给出接近的框，使用 NMS 可以增加 2% ～ 3% mAP。而对于 R-CNN 等基于区域分类的算法，NMS 是必不可少的。</p>
+<h2 id="Summary-and-Results"><a href="#Summary-and-Results" class="headerlink" title="Summary and Results"></a>Summary and Results</h2><p>YOLO 的几个问题：</p>
+<ol>
+<li>对小物体效果不好；</li>
+<li>YOLO 通过下采样后数据得出 BBox 的位置偏移和宽高，所以精度不高，同时对于一些罕见的长宽比或者尺寸的物体的效果不好；</li>
+<li>loss 只是近似反映检测效果的好坏，比如对于不同大小的物体，<code>x, y, w, h</code> 的误差仍不能准确反映 IoU 的误差。YOLO 对于位置的预测较差，是降低 mAP 的主要原因。</li>
+</ol>
+<p>数据集使用 Pascal VOC 07+12。如果在 12 测试，那么 07 的 test 也被用于训练。在 07 的测试结果为 <code>63.4%</code> mAP，在 12 的测试结果为 <code>57.9%</code> mAP。</p>
+<h1 id="YOLO9000-Better-Faster-Stronger"><a href="#YOLO9000-Better-Faster-Stronger" class="headerlink" title="YOLO9000: Better, Faster, Stronger"></a>YOLO9000: Better, Faster, Stronger</h1><p>改进：除了一些提高精度的，YOLOv2 还引入了 multi-scale training，所以它可在不同输入尺寸上工作，提供速度精度的 tradeoff。此外，提出了一种联合训练，可以同时在 COCO 和 ImageNet 上训练，网络可以学习检测那些没有在检测数据集中标注的类别。</p>
+<h2 id="Architecture-1"><a href="#Architecture-1" class="headerlink" title="Architecture"></a>Architecture</h2><p>首先看网络，作者将网络减少了几层，提高了速度，同时加入了 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1502.03167">BN</a> 层，提高了精度。</p>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-darknet-19-classification.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-darknet-19-classification.png" alt="Darknet-19 for classification"></a><em>Darknet-19 for classification</em></p>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-darknet-19-detection.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-darknet-19-detection.png" alt="Darknet-19 for detection"></a><em>Darknet-19 for detection</em></p>
+<p>整个网络（左图）含有 19 个卷积层和 5 个最大值池化层，不再有全连接层，网络的 output stride 减小了一倍变为 32。倒数第二层是 Global Average Pooling，出自 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1312.4400">Network in Network</a>，<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1409.4842">GoogLeNet</a> 中也使用了，方法是在每个特征图通道上进行平均池化。在每个卷积层之后都加了 BN 层，网络不再需要 Dropout 层。</p>
+<p>对于检测（右图），网络输入尺寸也进行了改动，希望最终输出一个奇数尺寸，这样就会有一个中心点。所以 v2 中默认输入尺寸是 416 × 416，增减输入尺寸是以 64 为单位进行。一般一个大物体的中心会落在图像中心，所以这样可以用一个格子去预测它而不是四个格子。</p>
+<p>左图这个网络是用于 ImageNet Classification 的，在预训练完后需要改成检测网络。方法是去掉最后 Convolutional、AvgPool、Softmax 三层，然后加上三层 1024 × 3 × 3 卷积，最后用一个 1 × 1 卷积进行预测，得到所需 <code>A × (5 + C) = 125</code> 通道（这里通道数与 YOLOv1 不同，见下文）。此外，这里还加入一个 passthrough layer，使得网络对于小物体的检测效果更好。注意这里论文里说的和实际上<a target="_blank" rel="noopener" href="https://github.com/pjreddie/darknet/blob/master/cfg/yolov2.cfg#L211-L217">代码</a>里做的有些不同：论文中是把最后一个 512 × 3 × 3 卷积的结果，尺寸为 26 × 26 × 512 feature map 转化为 13 × 13 × 2048，然后 concat（通道上的连接）到倒数第二个卷积（也就是最后一个 3 × 3 卷积）的结果上；实际代码中对尺寸为 26 × 26 × 512 feature map 后面加了一个 64 × 1 × 1 的卷积，降低了通道数，然后再 <a target="_blank" rel="noopener" href="https://github.com/pjreddie/darknet/blob/8215a8864d4ad07e058acafd75b2c6ff6600b9e8/src/blas.c#L9-L30">reorg</a> 转化为 13 × 13 × 256，并 concat 到 13 × 13 × 1024 的特征图上，输出一个 13 × 13 × 1280 的特征图。</p>
+<p>再看其它的改进：</p>
+<p><strong>Anchor Box</strong></p>
+<p>YOLO 在 BBox 位置预测上表现并不好，一方面是因为它直接给出宽高。相比 R-CNN 中有预设的 Anchors，网络只需要预测一个 offset，这相对容易。作者在 v2 中引入了 Anchors。</p>
+<p>第二个改动是，之前每个格子只预测一次类别，这实际上是对 BBox 的一种限制，现在需要 decouple。所以对每个 Anchor 都预测一组类别，它们的意义没变。同时，每个格子上的 BBox/Anchor 数量不再是 2。</p>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-output-tensor.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-output-tensor.png" alt="output tensor of YOLOv1 against YOLOv2"></a><em>output tensor of YOLOv1 against YOLOv2</em></p>
+<p>此外，R-CNN 系列的 Anchors 是人工指定的，而这里的 Anchors 是通过 k-means 算法得到的，距离指标为 <code>d(box, centroid) = 1 − IoU(box, centroid)</code>，即以 IoU 来判断。下图是在 COCO 和 VOC 上聚类出的 Anchor 形状，以及使用不同距离指标或人工指定得到的平均 IoU。</p>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-anchor-clusters.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-anchor-clusters.png" alt="k-means result"></a><em>k-means result</em></p>
+<p><strong>Direct location prediction</strong></p>
+<p>这里先回顾一下 R-CNN 系列中的 regressor 是怎么工作的（注意在 YOLO 的论文中符号错了）：</p>
+<p>x=(tx∗wa)+xa , y=(ty∗ha)+yaw=wa⋅etw , h=ha⋅eth</p>
+<p>其中带下标 <code>a</code> 的是 Anchor，<code>t</code> 表示网络预测的值。</p>
+<p>对于位置这样引入了尺度不变性，比如 <code>tx = 1</code> 框的中心点就向右移动一个框宽度的距离。但是这对于框的位置没有限定，对于随机化的初始值，框可能出现在图中的任何位置，导致难以训练。所以位置还是沿用 v1 中的相对于格子的预测方式，宽高则采用相同的指数形式。</p>
+<p>bx=σ(tx)+cx , by=σ(ty)+cybw=pwetw , bh=pheth</p>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-v2-anchor-regression.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-v2-anchor-regression.png" alt="YOLOv2 anchor regression"></a><em>YOLOv2 anchor regression</em></p>
+<p>公式里 <code>sigma(·)</code> 是一个 logistic activation (sigmoid) 用于将值限定在 <code>[0, 1]</code>，即把中心点的变动限制在当前格子里。<code>cx, cy</code> 是所在格点左上角到图像左上角的距离，例如上图中是 <code>(1, 1)</code>（网格大小归一化了）。这里可以看出，这个位置是直接预测出的，它不依赖于设定的 Anchors。</p>
+<h2 id="Train-YOLOv2"><a href="#Train-YOLOv2" class="headerlink" title="Train YOLOv2"></a>Train YOLOv2</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>网络</th>
+<th>top-5</th>
+<th>top-1</th>
+<th>输入尺寸</th>
+<th>floating point operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VGG-16</td>
+<td>90.0%</td>
+<td>-</td>
+<td>224 × 224</td>
+<td>30.69 billion</td>
+</tr>
+<tr>
+<td>Darknet-24</td>
+<td>88.0%</td>
+<td>-</td>
+<td>224 × 224</td>
+<td>8.52 billion</td>
+</tr>
+<tr>
+<td>Darknet-19</td>
+<td>91.2%</td>
+<td>72.9%</td>
+<td>224 × 224</td>
+<td>5.58 billion</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>在 ImageNet 上训练 160 个 epochs。lr = 0.1，polynomial rate decay with a power of 4，weight decay = 0.0005，momentum = 0.9。随机裁剪、旋转、颜色和曝光调整。</li>
+<li>High Resolution Classifier：ImageNet 训练是使用 224 × 224，这样在进行检测训练时，网络不仅要学习更大的 448 × 448 输入，还要同时学习检测任务。所以在 v2 中，会在 ImageNet 上使用 448 × 448 fine tune 10 个 epochs 再进行检测训练，lr = 10e-3。准确率达到 76.5%/93.3%。</li>
+<li>Multi-Scale Training：接下来进行检测训练。训练中每过 10 个 epochs，会在 <code>{320, 352, ..., 608}</code> 中随机选择一个输入尺寸继续训练。共 160 个 epochs，lr = 10e-3，在 10、60、90 epoch 时减半。weight decay、momentum 与上面相同。</li>
+</ol>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-v2-improvement-path.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-v2-improvement-path.png" alt="The path from YOLO to YOLOv2"></a><em>The path from YOLO to YOLOv2</em></p>
+<p>上表总结了从 v1 到 v2 的各项改进，说明一下：表中的 anchor boxes 指的是人工指定的，固定尺寸和长宽比的 anchors，使用这种框，mAP 69.5 -&gt; 69.2，recall 81% -&gt; 88%，精度小幅下降召回明显提高，说明网络有较大提升空间，所以作者采取了下面的 k-means 聚类找出最佳初始尺寸的方法。对于这种聚类得到的框，作者叫它 dimension priors，可能应该翻译成「先验框」。但是我觉得它本质和 anchors 没什么差别，且对于网络的修改也沿用了，其实在 v3 中作者也管它叫 anchors 了，所以在上文没有区分。</p>
+<h2 id="Joint-train-on-object-detection-and-classification-YOLO9000"><a href="#Joint-train-on-object-detection-and-classification-YOLO9000" class="headerlink" title="Joint train on object detection and classification (YOLO9000)"></a>Joint train on object detection and classification (YOLO9000)</h2><p>基本思路是对于检测的数据传入，BP 整个网络，对于分类的数据传入，只 BP 有关分类的网络部分。一个问题是检测数据集如 COCO 提供的是一个很泛的类别，比如「狗」，共 80 类；而分类数据集如 ImageNet 提供的类别是很具体的，如「哈士奇」，共 21841 类。而 Softmax 意味着各类别之间是相互排斥的，而我们希望只在每个数据集内类别相互排斥，而数据集之间不是。</p>
+<p>下面仍然先要在分类上预训练，然后再训练检测。</p>
+<p><strong>Classification</strong></p>
+<p>ImageNet 的标签来自于 WordNet，一个语言数据集，它有详细的层级，比如 canine -&gt; dog -&gt; hunting dog -&gt; terrier -&gt; Norfolk terrier，但是它是一个 Graph 而不是 Tree，比如 dog 可以属于 canine 也可以属于 domestic animal，即有多个父节点。好在大多数类别通向 root 只有一条路径，对于有多条路径的，选择最短的路径，舍弃其它的，这样就可以构造一个 Word Tree。</p>
+<p>对于 ImageNet-1000，构建完整个图之后有 1369 个节点，增加了额外的 369 个节点。每一个节点预测一个条件概率，最终的概率需要将它们相乘，例如 <code>Pr(Norfolk terrier) = Pr(Norfolk terrier|terrier) * Pr(terrier|hunting dog) ∗ ... ∗ Pr(mammal|animal) * Pr(animal|physical object) * Pr(physical object)</code>。对于分类，每张图都有物体，所以这里最后一项 <code>Pr(physical object) = 1</code>。</p>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-prediction-on-wordtree1k.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-prediction-on-wordtree1k.png" alt="Prediction on ImageNet vs WordTree"></a><em>Prediction on ImageNet vs WordTree</em></p>
+<p>在 ImageNet 上使用这个图训练网络，预测的形式如上图右侧，在每层级下分别 Softmax。一张图片会顺着这个 tree（可参考下面的图）走到 root，获得路径上的所有标签，即一张图现在有多个标注。这样训练的结果为 71.9%/90.4%。新增节点后准确率下降不多，同时如果网络见到了一个没训练过的狗的品种，那么预测中「狗」的概率会很大，同时所有具体类别的概率又很小。</p>
+<p><strong>Detection</strong></p>
+<p>对于框的分类结果，检测中每个格子内不一定有物体， <code>Pr(physical object)</code> 根据 confidence/objectness 分数（BBox 的第五个预测值）确定。判断一个框的类别时，从 WordTree 根节点开始向下遍历，对每一个节点，在它的所有子节点中，选择概率最大的那个（一个节点下面的所有子节点是互斥的），一直向下遍历直到某个节点的子节点概率低于设定的阈值（意味着很难确定它的下一层对象到底是哪个），或达到叶子节点，那么该节点就是对应的对象。</p>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-combine-coco-and-imagenet.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-combine-coco-and-imagenet.png" alt="Combining datasets using WordTree hierarchy"></a><em>Combining datasets using WordTree hierarchy</em></p>
+<p>训练总共选取了 9000 类，含有 COCO、ImageNet 分类和检测数据集。为了构造 Tree 产生的父节点，构造的方法与之前相同，加起来共 9418 类。Oversampling COCO 使得数据量之比为 4:1。</p>
+<p>网络结构和 v2 相同，先验框的尺寸改为 3 种。标注和反向传播与之前类似，（1）对于检测数据集图像，loss 与之前相同，只是这里对于 class，只反向传播标注的那个节点及其父节点上的 loss，不 BP 其子节点上的；（2）对于分类数据集图像，首先找到 GT 所属类别的预测值最高的那个框，只反向传播这个框上的 class 和 objectness 部分，四个坐标不反向传播。对于 class，与检测的相同，只看其和其父节点的，对于 objectness，原文是「We also assume that the predicted box overlaps what would be the ground truth label by at least .3 IOU and we backpropagate objectness loss based on this assumption.」，我觉得意思是说如果预测的 <code>objectness = Pr(object) * IoU</code> 小于 <code>1 * 0.3</code> 的话就有一个损失在上面，具体损失形式需要以后看一下代码了更新。</p>
+<p><strong>Results</strong></p>
+<p>作者在 ImageNet Detection 上测试，其中 44 类是与 COCO 相同的，156 类是 COCO 中没有只出现在 ImageNet Classification 的。结果是 19.7 mAP，在不重合的 156 类上有 16.0 mAP。具体来看不重合的类别部分，对于各种动物，COCO 中有一些动物的标注，对于新动物的类别的表现不错：<code>red panda = 50.7, fox = 52.1, koala bear = 54.3, tiger = 61.0, armadillo = 61.7</code>；对于一些 COCO 中完全没有相关（类似）的类别的，表现很差：<code>diaper = 0.0, horizontal bar = 0.0, rubber eraser = 0.0, sunglasses = 0.0, swimming trunks = 0.0</code>。</p>
+<h1 id="YOLOv3-An-Incremental-Improvement"><a href="#YOLOv3-An-Incremental-Improvement" class="headerlink" title="YOLOv3: An Incremental Improvement"></a>YOLOv3: An Incremental Improvement</h1><p>YOLOv3 和 v4 都是 tech report，更多是把别人的工作在保证速度前提下整合进 YOLO 以提高精度。</p>
+<p>每一代 YOLO 都对网络或是说 backbone 进行了改进，YOLOv3 更是主要集中在这个网络上。</p>
+<h2 id="Network"><a href="#Network" class="headerlink" title="Network"></a>Network</h2><p>YOLOv3 同样是先有一个检测网络，在 ImageNet 上预训练，然后改为检测网络训练。下图（右侧是左侧红线部分）是 DarkNet-53，含有 52 个卷积和 1 个全连接。可以看到，与 DarkNet-19 相比，层数多了不少，主要的改变在于：</p>
+<ol>
+<li>去掉了池化层，全部由一个步长为 2 的卷积层完成下采样。</li>
+<li>最后的全连接层又回来了。</li>
+<li>内部出现了类似于 ResNet 的残差连接。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-darknet-53-classification.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-darknet-53-classification.png" alt="Darknet-53 for classification"></a><em>Darknet-53 for classification</em></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>backbone</th>
+<th>top-1</th>
+<th>top-5</th>
+<th>测试尺寸</th>
+<th>Ops</th>
+<th>FPS</th>
+<th>BFLOP/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Darknet-19</td>
+<td>74.1%</td>
+<td>91.8%</td>
+<td>256 × 256</td>
+<td>7.29 B</td>
+<td>171</td>
+<td>1246</td>
+</tr>
+<tr>
+<td>Darknet-53</td>
+<td>77.2%</td>
+<td>93.8%</td>
+<td>256 × 256</td>
+<td>18.7 B</td>
+<td>78</td>
+<td>1457</td>
+</tr>
+<tr>
+<td>ResNet-101</td>
+<td>77.1%</td>
+<td>93.7%</td>
+<td>256 × 256</td>
+<td>19.7 B</td>
+<td>53</td>
+<td>1039</td>
+</tr>
+<tr>
+<td>ResNet-152</td>
+<td>77.6%</td>
+<td>93.8%</td>
+<td>256 × 256</td>
+<td>29.4 B</td>
+<td>37</td>
+<td>1090</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>上述数据统一在 TitanX 下测试，最后一项 BFLOP/s 意味着 Darknet 对 GPU 的利用更好。</p>
+<p>再看检测网络，在这里作者引入了类似于 FPN 的多级预测结构。这个在论文里讲得有点零散混乱且没有结构图，我根据<a target="_blank" rel="noopener" href="https://github.com/pjreddie/darknet/blob/master/cfg/yolov3.cfg">代码</a>做了一个下面的网络结构图。</p>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-darknet-53-detection.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-darknet-53-detection.png" alt="Darknet-53 for detection"></a><em>Darknet-53 for detection</em></p>
+<p>解释几点：</p>
+<ol>
+<li>每一个 Conv 都跟着一个 BN 和 leaky ReLU 激活层，最后每个 Prediction 是通过一个无 BN、linear 激活的 1 × 1 卷积层得到的，就是一般的预测层，在图中没有画出（也可认为绿色的 Prediction 就是这个卷积）。</li>
+<li>每一个 Add 之后有一个 linear activation。</li>
+<li>这里每个 Residual Unit 里面只有两层，与 ResNet 的不一样。上方蓝色的 <code>N×</code> 表示括号内的模块重复 N 次。</li>
+<li>Conv 上方的尺寸是指经过这一层后的尺寸，以输入 <code>416 × 416</code> 为例。都是 CHW 的格式。</li>
+<li>黄色的层是改为检测网络之后新加入的，白色的是原有的 Darknet-53 Backbone，共 52 层（去掉了最后的全连接）。</li>
+</ol>
+<p>再看最后输出的 255 个通道是怎么回事，<code>255 = 3 × (80 + 5)</code>，首先这里是以 COCO 为基准了，不再使用 VOC 的，所以是 80；5 就是从 v1 一直延续来的；3 指的是三个 Anchors，在 v2 里是五个，而 v3 实际用了 9 个，平均分在三级预测上。在 COCO 上尺寸分别是 <code>(10×13),(16×30),(33×23),(30×61),(62×45),(59× 119), (116 × 90), (156 × 198), (373 × 326)</code>。</p>
+<h2 id="Other-Improvements"><a href="#Other-Improvements" class="headerlink" title="Other Improvements"></a>Other Improvements</h2><p><strong>Bounding Box Prediction (objectness)</strong></p>
+<p>对于 objectness 分数，YOLOv3 采用了 logistic regression，所以如果一个 BBox 与 GT 的交叠大于任何其它的 BBox，那么它的 objectness 分数应该为 <code>1</code>。训练使用 binary cross-entropy loss，不再是 SSE loss。</p>
+<p>同时引入了类似 RPN 的匹配机制：如果一个框与 GT 的交叠大于一个阈值 <code>0.5</code> 但它又不是交叠最大的框，那么这个将作为非正非负的样本，在训练时被忽略。</p>
+<p>同样，一个 GT 只会与一个 Anchor/BBox 匹配上，对于没有匹配上的负样本，loss 中将没有 coordinate 和 class predictions 部分，只有 objectness loss。</p>
+<p><strong>Class Prediction (classes)</strong></p>
+<p>作者去掉了之前使用的 Softmax 进行类别分类，因为发现对准确率没有帮助，且一个大型数据集如 Open Images 上面有一些交叠的类别，比如 Woman - Person。使用 independent logistic classifiers 预测，并设定一个阈值，高于这个阈值的类别将被赋给对应的框。训练使用 binary cross-entropy loss，不再是 SSE loss。</p>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-v3-results-on-coco-test-dev.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-v3-results-on-coco-test-dev.png" alt="YOLO v3 results on COCO test-dev"></a><em>YOLO v3 results on COCO test-dev</em></p>
+<p>从上表可以看出，YOLOv3-608 在 COCO 上的结果以及到了和 ResNet-FasterRCNN 接近的水平，但是时间仅需 51ms，是后者的三倍多。同时，在 AP50 指标上 YOLO 表现得很好，说明很大一部分的问题来自于框的位置的不准确。</p>
+<p><a target="_blank" rel="noopener" href="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-v3-precision-speed-compare.png"><img src="https://d2y8c08sxwbp8v.cloudfront.net/2020-detection/yolo-v3-precision-speed-compare.png" alt="precision-speed compare on COCO test-dev"></a><em>precision-speed compare on COCO test-dev</em></p>
+<h1 id="YOLOv4-Optimal-Speed-and-Accuracy-of-Object-Detection"><a href="#YOLOv4-Optimal-Speed-and-Accuracy-of-Object-Detection" class="headerlink" title="YOLOv4: Optimal Speed and Accuracy of Object Detection"></a>YOLOv4: Optimal Speed and Accuracy of Object Detection</h1><p>YOLOv4 是一篇将其它人提出许多的方法整合进 YOLO 的文章，但有一个前提就是保证速度，所以有些方法做了一些改动。同时基于这个原则，作者希望能使用较亲民的设备进行训练和预测，所以所有涉及多 GPU 的方法比如 SyncBN 均不予考虑。相应的测试也选用单个 RTX 2080Ti/RTX 2070/GTX 1080Ti 这类游戏显卡（但是 2080Ti 这好像不是所有打游戏的都买得起的？）。不过这篇文章还挺好的，对检测的研究也进行了一个相应的划分总结，还是挺全面的像综述一样，值得看看原文，本文里只有 YOLOv4 用到了的方法的分析。</p>
+<p>其实我感觉很难写，因为涉及太多其它的文章，不知道简单几句能不能给一篇文章讲清楚。此外有些还是今年的，很新，我也没看过。。。</p>
+<p>总的来说，作者将其它人的工作划分为 Bag of freebies (BoF) 和 Bag of specials (BoS)。前者指在训练时候的一些方法，不影响预测时间和模型复杂度；而后者指的是整个构架的改动，对预测（时间）会有影响。我花了点时间给整理了一下，下面两个表是用到的所有方法和对应论文，没有对应论文的就是作者在 YOLOv4 中应用的一些简单 BoF，可以看到，这篇文章各种 tricks 真的巨多，我相信给其它算法这么一顿军训效果也能好不少的。不过别人已经测试好了，直接能用，也很实用对吧。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Backbone BoF</th>
+<th>arXiv</th>
+<th>Detector BoF</th>
+<th>arXiv</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CutMix</td>
+<td>ICCV 2019 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1905.04899">1905.04899</a></td>
+<td>CIoU-loss</td>
+<td>AAAI 2020 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1911.08287">1911.08287</a></td>
+</tr>
+<tr>
+<td>DropBlock regularization</td>
+<td>NIPS 2018 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1810.12890">1810.12890</a></td>
+<td>DropBlock regularization</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1810.12890">1810.12890</a></td>
+</tr>
+<tr>
+<td>Class label smoothing</td>
+<td>CVPR 2016 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1512.00567">1512.00567</a></td>
+<td>Cross mini-Batch Normalization (CmBN)</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2002.05712">2002.05712</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Cosine annealing scheduler</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1608.03983">1608.03983</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Others:</p>
+<ul>
+<li>BoF: Mosaic data augmentation.</li>
+<li>Detector BoF: Eliminate grid sensitivity, Optimal hyper-parameters, Random training shapes, Self-Adversarial Training, Multiple anchors for a single ground truth.</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Backbone BoS</th>
+<th>arXiv</th>
+<th>Detector BoS</th>
+<th>arXiv</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mish activation</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1908.08681">1908.08681</a></td>
+<td>Mish activation</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1908.08681">1908.08681</a></td>
+</tr>
+<tr>
+<td>Cross-stage partial connections (CSP)</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1911.11929">1911.11929</a></td>
+<td>SPP-block</td>
+<td>TPAMI 2015 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1406.4729">1406.4729</a></td>
+</tr>
+<tr>
+<td>Multi-input weighted residual connections (MiWRC)</td>
+<td>CVPR 2020 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1911.09070">1911.09070</a></td>
+<td>Path-aggregation block (PAN)</td>
+<td>CVPR 2018 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1803.01534">1803.01534</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>SAM-block</td>
+<td>ECCV 2018 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1807.06521">1807.06521</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>DIoU-NMS</td>
+<td>AAAI 2020 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1911.08287">1911.08287</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><del>仍需要一点时间施工，不过我猜要拖到五月底了。</del><br>已经到五月底了，然而事情很多，考虑到眼下两个月之内应该不会有机会看论文，所以我愉快地宣布下面的内容鸽子了 🐦。</p>
+<h2 id="Bag-of-freebies"><a href="#Bag-of-freebies" class="headerlink" title="Bag of freebies"></a>Bag of freebies</h2><p>最常用的 bag of freebies 就是数据增强（data augmentation）了，YOLOv4 用了下面这些。</p>
+<p><strong>CutMix</strong></p>
+<p>CutMix 是一种 regional dropout strategy，这类方法通过去除一些 informative pixels 来使得网络学习图像中 less discriminative 部分的信息。</p>
+<p>关于训练时的标签和损失函数，YOLOv4 中使用了下面这些。</p>
+<p><strong>Class label smoothing</strong></p>
+<p>使得 class 标签不绝对，提升分类器效果。</p>
+<p><strong>CIoU Loss</strong></p>
+<p>直接以 IoU 作为 regression 的损失函数，提高了回归精度。从 IoU -&gt; GIoU -&gt; DIoU -&gt; CIoU 的变化过程，见 <a target="_blank" rel="noopener" href="https://tangh.github.io/articles/improvements-of-regressor-in-detector/#Generalized-Intersection-over-Union-A-Metric-and-A-Loss-for-Bounding-Box-Regression-CVPR-2019">另一篇关于 regressor 的文中 IoU Loss 的部分</a>。</p>
+<h2 id="Bag-of-specials"><a href="#Bag-of-specials" class="headerlink" title="Bag of specials"></a>Bag of specials</h2><p><strong>Multi-input weighted residual connections (MiWRC)、Path-aggregation block (PAN)</strong></p>
+<p>前者为带权重的特征融合方式，后者为 neck 上的新的特征融合路径。见 <a target="_blank" rel="noopener" href="https://tangh.github.io/articles/efficientnet-and-efficientdet/#Neck-BiFPN">另一篇关于 EfficientDet 文中 BiFPN 的部分</a>。</p>
+<p><strong>DIoU-NMS</strong></p>
+<p>在 NMS 时考虑两个 box 中心点之间的距离以稍微降低其 IoU 值的方法，见 <a target="_blank" rel="noopener" href="https://tangh.github.io/articles/improvements-of-regressor-in-detector/#Distance-IoU-and-Complete-IoU">另一篇关于 regressor 的文中 DIoU 的部分</a>。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Terence Cai</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://terence1023.github.io/2021/01/30/yolo-zhuan-lan/">http://terence1023.github.io/2021/01/30/yolo-zhuan-lan/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Terence Cai</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/01/31/geoffrey-hinton/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Geoffrey Hinton">
+                        
+                        <span class="card-title">Geoffrey Hinton</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-31
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Terence Cai
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Geoffrey-Hinton/">
+                        <span class="chip bg-color">Geoffrey Hinton</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/01/30/deep-learning-wu-en-da-bi-ji-1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="deep learning 吴恩达笔记(1)">
+                        
+                        <span class="card-title">deep learning 吴恩达笔记(1)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Terence Cai
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%90%B4%E6%81%A9%E8%BE%BE/">
+                        <span class="chip bg-color">吴恩达</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5020506940"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">Terence Cai</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">141.3k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/terence1023" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:992823930@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=992823930" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 992823930" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

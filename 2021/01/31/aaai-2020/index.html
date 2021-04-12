@@ -1,0 +1,1295 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="AAAI 2020, Terence">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>AAAI 2020 | Terence</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Terence</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Terence</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/terence1023" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/terence1023" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">AAAI 2020</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Geoffrey-Hinton/">
+                                <span class="chip bg-color">Geoffrey Hinton</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-01-31
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-03-26
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Hinton-向-AAAI-提交论文竟收到最差评价！深度学习三教父再押宝，AI-或突破常识瓶颈"><a href="#Hinton-向-AAAI-提交论文竟收到最差评价！深度学习三教父再押宝，AI-或突破常识瓶颈" class="headerlink" title="Hinton 向 AAAI 提交论文竟收到最差评价！深度学习三教父再押宝，AI 或突破常识瓶颈"></a><a target="_blank" rel="noopener" href="https://bbs.cvmart.net/topics/1474">Hinton 向 AAAI 提交论文竟收到最差评价！深度学习三教父再押宝，AI 或突破常识瓶颈</a></h1><blockquote>
+<p><strong>【导读】</strong>日前，图灵奖获得者、深度学习三巨头Geoffrey Hinton、Yann LeCun、Yoshua Bengio在AAAI聚首，分享各自最新研究成果。三位一致表示深度学习可以克服诸如对抗性示例之类的障碍，甚至可能获得常识。</p>
+</blockquote>
+<p>作为2020年人工智能学界的第一个顶会，AAAI 2020正在美国纽约举行，最佳论文等各大奖项已经揭晓。</p>
+<p>AAAI 2020的一大亮点是主办方特邀图灵奖获得者、深度学习三巨头Geoffrey Hinton、Yann LeCun、Yoshua Bengio同台，分享各自最新研究成果。三位一致表示深度学习可以克服诸如对抗性示例之类的障碍，甚至可能获得常识。</p>
+<h2 id="Geoffrey-Hinton：堆栈式胶囊自编码器"><a href="#Geoffrey-Hinton：堆栈式胶囊自编码器" class="headerlink" title="Geoffrey Hinton：堆栈式胶囊自编码器"></a>Geoffrey Hinton：堆栈式胶囊自编码器</h2><p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/C6BELdoxzR.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>首先，Geoffrey Hinton登台，做了题为“Stacked Capsule Autoencoders”的演讲，这也是他去年一篇论文的题目。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/begmKJ1gOD.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>论文地址：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1906.06818">https://arxiv.org/abs/1906.06818</a></p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/MTDT3Su5wm.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>Hinton首先介绍了识别物体的两种方法的优劣势：</p>
+<ul>
+<li>传统模型使用模块化表示形式（例如计算机图形学中使用的表示形式），但是它们通常涉及很多手动操作，这让深层次结构很难实现。</li>
+<li>卷积神经网络使用端到端学习，通过在所有图像位置使用相同的知识，它们获得了巨大的胜利。但是它们在很多方面与人类的感知不同。</li>
+</ul>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/hSQvQlqd4X.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>用Hinton的话讲，CNN就是”<strong>rubbish</strong>“，问题很多，比如处理视角的变化、解析图像、对抗性例子等等。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/nZD964NkcK.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/MPVNFZCLfi.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>吐槽完CNN，Hinton开始介绍重头戏：Capsules 2019: Stacked Capsule Auto-Encoders。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/Kc9sKkXM0i.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>在这项研究中，Hinton等人提出一个无监督版本的胶囊网络，通过可查看所有部件的神经编码器，进而推断物体胶囊的位置与姿势。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/6QTjMpLBF9.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>该编码器通过解码器进行反向传播训练，通过混合式姿势预测方案来预测已发现部件的姿势。同样是使用神经编码器，通过推断部件及其仿射变换，可以直接从图像中发现具体的部件。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/NmxF3OlIRZ.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>换句话说，每个相应的解码器图像像素建模，都是仿射变换部分做出的混合预测结果。他们通过未标记的数据习得物体及其部分胶囊，然后再对物体胶囊的存在向量进行聚类。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/M1TRFeavyV.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>最后，该成果在 SVHN 上获得了最先进的无监督分类结果 (55%)，同时在 MNIST 上获得了接近最先进的分类结果。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/hRZbtYItSF.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<h2 id="Yann-LeCun：自监督学习赋予机器-“常识”-，实现“真正的”人工智能"><a href="#Yann-LeCun：自监督学习赋予机器-“常识”-，实现“真正的”人工智能" class="headerlink" title="Yann LeCun：自监督学习赋予机器 “常识” ，实现“真正的”人工智能"></a>Yann LeCun：自监督学习赋予机器 “常识” ，实现“真正的”人工智能</h2><p>接着，Facebook人工智能总监、图灵奖得主Yann LeCun上台，继续推广他的自监督学习概念。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/cnex4pugwa.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>这位被誉为卷积神经之父的图灵奖得主，对自监督学习给予了深厚的希望以及非常坚实的肯定。</p>
+<p>他认为<strong>自监督学习因为更接近人类的学习程序，能够突破现有深度学习的局限。</strong></p>
+<p>目前被广泛使用的监督学习，对人工标记的依赖性交大，不仅耗时耗力，且无法完全保证人工标记过程中准确性的问题。另外，机器只能根据已标记的特征学习。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/qlBGABmKoR.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>强化学习是透过奖罚机制，让机器在虚拟情境中不断试错（trial and error），累积经验来学习。强化学习已经被证明在竞技游戏中体现出强大的能力，甚至远超人类，但性价比太低。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/OSQyDvw2jc.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>Yann LeCun认为自监督学习是克服上述问题的有效解决方案。自监督学习通过构建一个庞大的神经网络，透过预测来认识世界。这一点就非常类似于我们人类的学习过程，不断透过已知部分预测未知。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/ugE35FCIi7.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/bNZ6w8EXp1.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>预测是自监督学习的强力武器，例如预测到车子可能会撞到前方路障，就提前进行规避动作，而不需要人工标注这是路障需要避开，更不需要试错去积累经验。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/033HXtH5sp.gif?imageView2/2/w/1240/h/0" alt="file"><br><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/xLyNqEWcQ7.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>Yann LeCun认为现今的深度学习方法，虽然在自动驾驶、语言翻译、聊天机器人等方面取得进展，却无法创造出“真正的”人工智能。 </p>
+<p>他所谓的“真正的”人工智能，是具备常识、聪明、敏捷且灵活的机器人。他认为更接近人类学习行为的自监督学习方法，将会是实现这个宏远的第一步。</p>
+<h2 id="Yoshua-Bengio：从“系统1”向“系统2”进发"><a href="#Yoshua-Bengio：从“系统1”向“系统2”进发" class="headerlink" title="Yoshua Bengio：从“系统1”向“系统2”进发"></a>Yoshua Bengio：从“系统1”向“系统2”进发</h2><p>最后，深度学习三巨头之一、图灵奖得主Yoshua Bengio在会上做了题为“深度学习在系统2处理中的应用”（Deep Mind in System 2 Processing）的演讲。<strong>Bengio认为，深度学习的瓶颈已经出现，并指明了突破方向</strong>。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/5UuvjPiEpV.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>Bengio首先介绍了深度学习的发展困境。他引用了Daniel Kahneman的认知系统理论。</p>
+<p>Kahneman认为，人的认知系统主要分为“系统1”和“系统2”两个部分。“系统1”所主导的思维是直觉性的、下意识的和非语言的，它使得人类能在熟悉的情况下做出不假思索的快速反应；而“系统2”则是有意识的思维，注重逻辑、规划、推理和因果关系，它使得人类能在全新的情况下做出判断和决策。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/LMwwed8hvA.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>Bengio说，目前的深度学习类似于“系统1”的思维模式，想要提升至人类水平的智能，则需要开发出类似“系统2”的认知系统，他认为这必将是未来的发展方向，也是目前深度学习发展所遇到的瓶颈。</p>
+<p>Bengio指出，<strong>为突破该瓶颈，或许可以向自然智能身上获取灵感，模拟人类婴儿的学习模式。</strong></p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/NqLPzcCHQN.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>目前深度学习都是基于独立同分布的假设，但实际现状是，我们感兴趣的往往是出现次数非常少的数据。因此，Bengio认为，分布外泛化（out-of-distribution generalization）是目前深度学习所欠缺的，而且是向“系统2”推进的关键。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/niej8Mat0T.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>同时，他还提出，<strong>提升深度学习需要从“个体”（agent）的角度考虑</strong>。个体之间的互动也将影响深度学习的发展，因此需要采取包括建设更好的模型等措施。</p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/cO3cIAmOBh.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>Bengio还提到，“系统2”的两大关键是注意力和意识。注意力是近年深度学习发展的一个重要技术，目前已有大量的实现和探讨。而人类意识往往是先验的。他提出，这可以通过稀疏因子图（sparse factor graph）实现。稀疏因子图可用于学习变量间的因果关系，从而构造变量间的因果关系。</p>
+<h2 id="三巨头笑谈多年研究无人问津"><a href="#三巨头笑谈多年研究无人问津" class="headerlink" title="三巨头笑谈多年研究无人问津"></a>三巨头笑谈多年研究无人问津</h2><p>演讲结束后，Hinton、LeCun、Bengio“三巨头”进行了对话讨论。</p>
+<p>深度学习三巨头的再次聚首是深度学习的一次胜利的转折，该学科曾经被抛弃，甚至也被AAAI淘汰。这也有点自相矛盾，因为这三场演讲似乎都借用了通常被认为属于AI的对立面（即“符号性” AI理论家）的术语，他们是几年前抛弃了Bengio，Hinton和LeCun的人。 </p>
+<p>“然而，你们中的一些人对符号性的人工智能世界有点轻蔑，”主持人、麻省理工学院教授Leslie Kaebling注意到了术语的借用。 “我们能成为朋友吗？还是不能？”她问道，引得观众哄堂大笑。 </p>
+<p>Hinton站在会议桌旁，没有坐下，干脆地打趣道：“好吧，我们有着悠久的历史，比如，”引起了更多的笑声。 </p>
+<p>“<strong>上一次我向AAAI提交论文时，得到了我有史以来最差的评价，而且很刻薄！</strong>” Hinton说。</p>
+<p>“上面说，Hinton已经研究这个想法7年了，没人感兴趣，是时候继续前进了，”Hinton回忆说，LeCun和Bengio笑了，他们也默默无闻地工作了几十年，直到2012年的深度学习取得突破。“忘记这个需要一段时间，”Hinton说，虽然也许忘记过去并继续前进会更好，他也承认。 </p>
+<p><img src="https://bbs.cvmart.net/uploads/images/202002/12/3/30ymeVEKAi.gif?imageView2/2/w/1240/h/0" alt="file"></p>
+<p>Kaebling的问题击中了要害。三位科学家的演讲都暗示了他们的成果曾受到怀疑论者的攻击。</p>
+<p>LeCun表示，他在“社交媒体上还算活跃，并注意到很多人对于深度学习是什么并不清楚”。LeCun影射的正是之前与他在推特上来回争论的深度学习评论家Gary Marcus等人，他们的争论有时甚至有些剑拔弩张。LeCun在演讲的最开始用一张幻灯片定义了深度学习，回应的正是12月Marcus和Bengio之间的一场争论。</p>
+<p>但当晚的大多数情况下，三人之间还是显现出惺惺相惜之意。当有听众提问，对于彼此的观点有什么无法认同的地方时，Bengio打趣道：“这招Leslie已经在我们身上使过了，没有用。”Hinton则表示：“我可以告诉你有啥我不认同他们的。Bengio的邮件地址以‘魁北克’结尾。而我认为，在‘魁北克’之后还应该加上国家代码，但他没加。”</p>
+<p>他们还趁机损了对方几句。Hinton在他演讲的一开始就说明，他就是针对LeCun的。LeCun在30年前实现了卷积神经网路，并使其成为实用技术。<strong>Hinton表示，他要证明为何卷积神经网络完全是“垃圾”，应该以自己的胶囊网络代替。</strong>Hinton还自嘲称，过去三年中，他每年都会推出一个新版本的胶囊网络。他笑着说道：“忘记你们所熟悉的老版本胶囊网络吧，它们都是错的，这个版本才是对的。”</p>
+<p>作为一门学科，其中的有些困难将越来越难以解决。当Kebling问及，是否有人对于大公司使用AI的目的和打算表示担忧时。Hinton笑着指指LeCun，LeCun也笑着回指了Hinton。LeCun主管Facebook的AI研究部门，而Hinton则是谷歌AI团队成员。Hinton说：“呃，我觉得他们应该管管假新闻的事，但……”他说着，声音小了下去。与此同时，LeCun回应道：“实际上，我们正在处理这事。”这次交锋引发了现场最大的掌声和笑声。</p>
+<p>对于该领域的整体架构和如何改进，三位科学家提出了一些想法。Bengio指出，<strong>如今年轻学者们发表论文的压力比他读博士学位时大多了</strong>。他认为必须从结构上做出改变，让学者们能够更加关注长期的问题。LeCun同时也是纽约大学的教授。他表示作为一名教授，“我都不会录取我这样的学生。”</p>
+<p>Hinton多年来默默无闻地努力。他用慢吞吞温柔的英国腔，设法以轻松的方式阐释了这种短视的研究所带来的问题。</p>
+<p>他说：“对于这个过程我提出这样一个模型。人们就某个想法研究了很短的时间，取得了一点点进展就发表了论文。“</p>
+<p>“这就好比有人拿了一本很难的数独书，浏览了一遍，将每个数独题里简单的几个空填了。这给别人带来了大麻烦。”</p>
+<p>参考链接：</p>
+<p><a target="_blank" rel="noopener" href="https://www.zdnet.com/article/deep-learning-godfathers-bengio-hinton-and-lecun-say-the-field-can-fix-its-flaws/">https://www.zdnet.com/article/deep-learning-godfathers-bengio-hinton-and-lecun-say-the-field-can-fix-its-flaws/</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Terence Cai</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://terence1023.github.io/2021/01/31/aaai-2020/">http://terence1023.github.io/2021/01/31/aaai-2020/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Terence Cai</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Geoffrey-Hinton/">
+                                    <span class="chip bg-color">Geoffrey Hinton</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/01/31/deep-learning-mian-shi-ti/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Deep Learning 面试题">
+                        
+                        <span class="card-title">Deep Learning 面试题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-31
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Terence Cai
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/01/31/geoffrey-hinton/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Geoffrey Hinton">
+                        
+                        <span class="card-title">Geoffrey Hinton</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Terence Cai
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Geoffrey-Hinton/">
+                        <span class="chip bg-color">Geoffrey Hinton</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5020506940"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">Terence Cai</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">141.3k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/terence1023" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:992823930@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=992823930" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 992823930" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

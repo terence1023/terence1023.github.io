@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo 博客正确显示数学公式, Terence">
+    <meta name="keywords" content="Graph Neural Networks(GNN), Terence">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo 博客正确显示数学公式 | Terence</title>
+    <title>Graph Neural Networks(GNN) | Terence</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo 博客正确显示数学公式</h1>
+                    <h1 class="description center-align post-title">Graph Neural Networks(GNN)</h1>
                 </div>
             </div>
         </div>
@@ -433,8 +433,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Debug/">
-                                <span class="chip bg-color">Debug</span>
+                            <a href="/tags/Deep-Learning/">
+                                <span class="chip bg-color">Deep Learning</span>
+                            </a>
+                        
+                            <a href="/tags/GNN/">
+                                <span class="chip bg-color">GNN</span>
                             </a>
                         
                     </div>
@@ -449,28 +453,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-25
+                    2021-04-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-25
+                    2021-04-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    828
+                    131
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -488,42 +492,38 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Hexo-博客正确显示数学公式"><a href="#Hexo-博客正确显示数学公式" class="headerlink" title="Hexo 博客正确显示数学公式"></a>Hexo 博客正确显示数学公式</h1><p>昨天和前天提交作业的时候，MD文档的公式显示正常。部署后发现自己的博客有的公式可以正常显示，有的但是不可以，行内的公式也有问题。最开始我以为是自己公式打得有问题，后来排查了下是有的符号会被转译成别的东西，具体就没有深究了，参考这篇博客修改正确：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yexiaohhjk/article/details/82526604">hexo next主题解决无法显示数学公式</a></p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>Hexo 默认使用 hexo-renderer-marked 引擎渲染网页，该引擎会把一些特殊的 markdown 符号转换为相应的 html 标签，比如在 markdown 语法中，下划线<code>_</code>代表斜体，会被渲染引擎处理为<code>&lt;em&gt;</code>标签。</p>
-<p>因为类 Latex 格式书写的数学公式下划线<code>_</code>表示下标，有特殊的含义，如果被强制转换为<code>&lt;em&gt;</code>标签，那么 MathJax 引擎在渲染数学公式的时候就会出错。类似的语义冲突的符号还包括<code>*</code>, <code>{</code>, <code>}</code>, <code>\\</code>等。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="1-更换-Hexo-的-Markdown-渲染引擎"><a href="#1-更换-Hexo-的-Markdown-渲染引擎" class="headerlink" title="1. 更换 Hexo 的 Markdown 渲染引擎"></a>1. 更换 Hexo 的 Markdown 渲染引擎</h3><p>更换 Hexo 的 markdown 渲染引擎，hexo-renderer-kramed 引擎是在默认的渲染引擎 hexo-renderer-marked 的基础上修改了一些 bug ，两者比较接近，也比较轻量级。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">npm</span> uninstall hexo-renderer-marked --save
-<span class="token function">npm</span> <span class="token function">install</span> hexo-renderer-kramed --save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>执行上面的命令即可，先卸载原来的渲染引擎，再安装新的。<br>然后，跟换引擎后行间公式可以正确渲染了，但是这样还没有完全解决问题，行内公式的渲染还是有问题，因为 hexo-renderer-kramed 引擎也有语义冲突的问题。接下来到博客根目录下，找到 <code>node_modules\kramed\lib\rules\inline.js</code>，把第11行的 escape 变量的值做相应的修改：</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//escape: /^\\([\\`*{}\[\]()#$+\-.!_&gt;])/,</span>
-escape<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^\\([`*\[\]()#$+\-.!_&gt;])</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>这一步是在原基础上取消了对\,{,}的转义(escape)。<br>同时把第20行的 <code>em</code> 变量也要做相应的修改。</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span>
-em<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^\*((?:\*\*|[\s\S])+?)\*(?!\*)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="2-在-Hexo-主题中开启-MathJax-开关"><a href="#2-在-Hexo-主题中开启-MathJax-开关" class="headerlink" title="2.在 Hexo 主题中开启 MathJax 开关"></a>2.在 Hexo 主题中开启 MathJax 开关</h3><p>如何使用了主题了，别忘了在主题（Theme）中开启 MathJax 开关，因为我原本也是打开的，这里也记录下，保证完整性。下面以 Matery 主题为例，介绍下如何打开 MathJax 开关。</p>
-<ol>
-<li>进入到主题目录，找到 _config.yml 配置，把 math 默认的 false 修改为true，具体如下：</li>
-</ol>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"># Whether to activate the mathjax<span class="token punctuation">,</span> <span class="token keyword">this</span> is a global configuration<span class="token punctuation">,</span> but the post still does not open the mathjax rendering<span class="token punctuation">.</span>
-# Considering that the mathjax loading is time consuming<span class="token punctuation">,</span>
-# you also need to add <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">mathjax: true</span><span class="token template-punctuation string">`</span></span> to the Front<span class="token operator">-</span>matter <span class="token keyword">of</span> the post that needs to be rendered<span class="token punctuation">.</span>
-# 是否激活mathjax数学公式，这是全局配置，但文章仍然不会都开启mathjax渲染，
-# 考虑到mathjax加载比较耗时，你还需要在需要渲染的文章的Front<span class="token operator">-</span>matter中再加上<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">mathjax: true</span><span class="token template-punctuation string">`</span></span>才行<span class="token punctuation">.</span>
-mathjax<span class="token operator">:</span>
-  enable<span class="token operator">:</span> <span class="token boolean">true</span>
-  cdn<span class="token operator">:</span> https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>cdn<span class="token punctuation">.</span>bootcss<span class="token punctuation">.</span>com<span class="token operator">/</span>mathjax<span class="token operator">/</span><span class="token number">2.7</span><span class="token number">.5</span><span class="token operator">/</span>MathJax<span class="token punctuation">.</span>js<span class="token operator">?</span>config<span class="token operator">=</span>TeX<span class="token operator">-</span><span class="token constant">AMS</span><span class="token operator">-</span>MML_HTMLorMML<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ol>
-<li>在文章的 Front-matter 里打开 mathjax 开关，如下：</li>
-</ol>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">title<span class="token operator">:</span> Task4 <span class="token constant">NFM</span>
-date<span class="token operator">:</span> <span class="token number">2021</span><span class="token operator">-</span><span class="token number">03</span><span class="token operator">-</span><span class="token number">24</span> <span class="token number">22</span><span class="token operator">:</span><span class="token number">42</span><span class="token operator">:</span><span class="token number">19</span>
-mathjax<span class="token operator">:</span> <span class="token boolean">true</span>
-tags<span class="token operator">:</span>
-<span class="token operator">-</span> DataWhale<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这里需要注意的是，mathjax 加载比较耗时，建议有公式的博客添加，没有公式的就不要加这个了。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/yexiaohhjk/article/details/82526604">hexo next主题解决无法显示数学公式</a></li>
+                <h1 id="Graph-Neural-Networks-GNN"><a href="#Graph-Neural-Networks-GNN" class="headerlink" title="Graph Neural Networks-GNN"></a>Graph Neural Networks-GNN</h1><ul>
+<li>本文记录 <code>GNN</code> 学习内容</li>
+</ul>
+<h2 id="The-Excellent-Blog"><a href="#The-Excellent-Blog" class="headerlink" title="The Excellent Blog"></a>The Excellent Blog</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/120152289">综述|从10篇研究综述看图神经网络GNN的最新研究进展</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/75307407">图神经网络（Graph Neural Networks，GNN）综述</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/305395488/answer/554847680">graph convolutional network有什么比较好的应用task</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/54504471/answer/332657604">如何理解 Graph Convolutional Network（GCN）？</a></p>
+</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/72373094">解读三种经典GCN中的Parameter Sharing</a></li>
+</ul>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/62629465">图嵌入（Graph embedding）综述</a></li>
+</ul>
+<h2 id="Waiting-to-read"><a href="#Waiting-to-read" class="headerlink" title="Waiting to read"></a>Waiting to read</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://tkipf.github.io/graph-convolutional-networks/"><strong>GRAPH CONVOLUTIONAL NETWORKS</strong></a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/pinard/p/6221564.html">谱聚类（spectral clustering）原理总结</a></li>
+</ul>
+<h2 id="Paper"><a href="#Paper" class="headerlink" title="Paper"></a>Paper</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1812.04202">Deep Learning on Graphs: A Survey</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1901.00596">A Comprehensive Survey on Graph Neural Networks</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1710.10903">Graph Attention Networks</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1605.05273">Learning Convolutional Neural Networks for Graphs</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1819-pg-projects/Geometric-Deep-Learning-with-3D-Facial-Motion.pdf">Geometric Deep Learning with 3DFacial Motion</a></p>
+</li>
 </ul>
 
                 
@@ -551,7 +551,7 @@ tags<span class="token operator">:</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://terence1023.github.io/2021/03/25/hexo-bo-ke-zheng-que-xian-shi-shu-xue-gong-shi/">http://terence1023.github.io/2021/03/25/hexo-bo-ke-zheng-que-xian-shi-shu-xue-gong-shi/</a>
+                    <a href="http://terence1023.github.io/2021/04/18/graph-neural-networks-gnn/">http://terence1023.github.io/2021/04/18/graph-neural-networks-gnn/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -589,8 +589,12 @@ tags<span class="token operator">:</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Debug/">
-                                    <span class="chip bg-color">Debug</span>
+                                <a href="/tags/Deep-Learning/">
+                                    <span class="chip bg-color">Deep Learning</span>
+                                </a>
+                            
+                                <a href="/tags/GNN/">
+                                    <span class="chip bg-color">GNN</span>
                                 </a>
                             
                         </div>
@@ -760,17 +764,18 @@ tags<span class="token operator">:</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/03/25/task4-he-yue-bian-xie-shi-zhan-shi-li/">
+                <a href="/2021/04/18/graph-neural-networks-gnn/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Task4 合约编写实战实例">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Graph Neural Networks(GNN)">
                         
-                        <span class="card-title">Task4 合约编写实战实例</span>
+                        <span class="card-title">Graph Neural Networks(GNN)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -780,9 +785,9 @@ tags<span class="token operator">:</span>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -791,15 +796,16 @@ tags<span class="token operator">:</span>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/DataWhale/">
-                        <span class="chip bg-color">DataWhale</span>
+                    <a href="/tags/Deep-Learning/">
+                        <span class="chip bg-color">Deep Learning</span>
                     </a>
                     
-                    <a href="/tags/Blockchain/">
-                        <span class="chip bg-color">Blockchain</span>
+                    <a href="/tags/GNN/">
+                        <span class="chip bg-color">GNN</span>
                     </a>
                     
                 </div>
@@ -813,13 +819,13 @@ tags<span class="token operator">:</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/24/task4-nfm/">
+                <a href="/2021/04/16/task3-shu-ju-guan-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Task4 NFM">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Task3 数据管理">
                         
-                        <span class="card-title">Task4 NFM</span>
+                        <span class="card-title">Task3 数据管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -830,7 +836,7 @@ tags<span class="token operator">:</span>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
                             </span>
                         <span class="publish-author">
                             
@@ -842,6 +848,10 @@ tags<span class="token operator">:</span>
                 </div>
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="/tags/Docker/">
+                        <span class="chip bg-color">Docker</span>
+                    </a>
                     
                     <a href="/tags/DataWhale/">
                         <span class="chip bg-color">DataWhale</span>

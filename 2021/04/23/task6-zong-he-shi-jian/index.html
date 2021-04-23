@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Geoffrey Hinton, Terence">
+    <meta name="keywords" content="Task6 综合实践, Terence">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Geoffrey Hinton | Terence</title>
+    <title>Task6 综合实践 | Terence</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Geoffrey Hinton</h1>
+                    <h1 class="description center-align post-title">Task6 综合实践</h1>
                 </div>
             </div>
         </div>
@@ -433,8 +433,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Geoffrey-Hinton/">
-                                <span class="chip bg-color">Geoffrey Hinton</span>
+                            <a href="/tags/Docker/">
+                                <span class="chip bg-color">Docker</span>
+                            </a>
+                        
+                            <a href="/tags/DataWhale/">
+                                <span class="chip bg-color">DataWhale</span>
                             </a>
                         
                     </div>
@@ -449,28 +453,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-31
+                    2021-04-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-31
+                    2021-04-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    55
+                    659
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -488,10 +492,61 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="http://www.cs.toronto.edu/~hinton/bio.html">Geoffrey E. Hinton’s Biographical Sketch</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/62645723">【AI大咖】认真认识一代AI教父Hinton</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/29435406">浅析 Hinton 最近提出的 Capsule 计划</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/65430434/answer/231173731">如何看待Geoffrey Hinton的言论，深度学习要另起炉灶，彻底抛弃反向传播？</a></p>
+                <h2 id="实例：React-项目发布到-GitHub-Pages"><a href="#实例：React-项目发布到-GitHub-Pages" class="headerlink" title="实例：React 项目发布到 GitHub Pages"></a>实例：React 项目发布到 GitHub Pages</h2><p>下面是一个实例，通过 GitHub Actions 构建一个 React 项目，并发布到 GitHub Pages。最终代码都在<a target="_blank" rel="noopener" href="https://github.com/ruanyf/github-actions-demo">这个仓库</a>里面，发布后的参考网址为<a target="_blank" rel="noopener" href="https://ruanyf.github.io/github-actions-demo">ruanyf.github.io/github-actions-demo</a>。</p>
+<p>第一步，GitHub Actions 目前还处在测试阶段，需要到<a target="_blank" rel="noopener" href="https://github.com/features/actions/signup/">这个网址</a>申请测试资格。申请以后，可能需要几天才能通过。据说，2019年11月就会放开。(注：现在已经放开了)</p>
+<p>获得资格后，仓库顶部的菜单会出现<code>Actions</code>一项。</p>
+<p><img src="https://www.wangbase.com/blogimg/asset/201909/bg2019091106.jpg" alt="img"></p>
+<p>第二步，这个示例需要将构建成果发到 GitHub 仓库，因此需要 GitHub 密钥。按照<a target="_blank" rel="noopener" href="https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line">官方文档</a>，生成一个密钥。然后，将这个密钥储存到当前仓库的<code>Settings/Secrets</code>里面。</p>
+<p><img src="https://www.wangbase.com/blogimg/asset/201909/bg2019091107.jpg" alt="img"></p>
+<p>上图是储存秘密的环境变量的地方。环境变量的名字可以随便起，这里用的是<code>ACCESS_TOKEN</code>。如果你不用这个名字，后面脚本里的变量名也要跟着改。</p>
+<p>第三步，本地计算机使用<a target="_blank" rel="noopener" href="https://github.com/facebook/create-react-app"><code>create-react-app</code></a>，生成一个标准的 React 应用。</p>
+<blockquote>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ npx create-react-app github-actions-demo
+$ <span class="token builtin class-name">cd</span> github-actions-demo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后，打开<code>package.json</code>文件，加一个<code>homepage</code>字段，表示该应用发布后的根目录（参见<a target="_blank" rel="noopener" href="https://create-react-app.dev/docs/deployment#building-for-relative-paths">官方文档</a>）。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token string">"homepage"</span><span class="token operator">:</span> <span class="token string">"https://terence1023.github.io/github-actions-demo"</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>第四步，在这个仓库的<code>.github/workflows</code>目录，生成一个 workflow 文件，名字可以随便取，这个示例是<code>ci.yml</code>。</p>
+</blockquote>
+<p>我们选用一个别人已经写好的 action：<a target="_blank" rel="noopener" href="https://github.com/marketplace/actions/deploy-to-github-pages">JamesIves/github-pages-deploy-action</a>，它提供了 workflow 的范例文件，直接拷贝过来就行了（查看<a target="_blank" rel="noopener" href="https://github.com/ruanyf/github-actions-demo/blob/master/.github/workflows/ci.yml">源码</a>）。</p>
+<blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">name<span class="token operator">:</span> GitHub Actions Build and Deploy Demo
+on<span class="token operator">:</span>
+  push<span class="token operator">:</span>
+    branches<span class="token operator">:</span>
+      <span class="token operator">-</span> master
+jobs<span class="token operator">:</span>
+  build<span class="token operator">-</span>and<span class="token operator">-</span>deploy<span class="token operator">:</span>
+    runs<span class="token operator">-</span>on<span class="token operator">:</span> ubuntu<span class="token operator">-</span>latest
+    steps<span class="token operator">:</span>
+    <span class="token operator">-</span> name<span class="token operator">:</span> Checkout
+      uses<span class="token operator">:</span> actions<span class="token operator">/</span>checkout@master
+
+    <span class="token operator">-</span> name<span class="token operator">:</span> Build and Deploy
+      uses<span class="token operator">:</span> JamesIves<span class="token operator">/</span>github<span class="token operator">-</span>pages<span class="token operator">-</span>deploy<span class="token operator">-</span>action@master
+      env<span class="token operator">:</span>
+        <span class="token constant">ACCESS_TOKEN</span><span class="token operator">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets<span class="token punctuation">.</span><span class="token constant">ACCESS_TOKEN</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token constant">BRANCH</span><span class="token operator">:</span> gh<span class="token operator">-</span>pages
+        <span class="token constant">FOLDER</span><span class="token operator">:</span> build
+        <span class="token constant">BUILD_SCRIPT</span><span class="token operator">:</span> npm install <span class="token operator">&amp;&amp;</span> npm run build<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>上面这个 workflow 文件的要点如下。</p>
+<ol>
+<li>整个流程在<code>master</code>分支发生<code>push</code>事件时触发。</li>
+<li>只有一个<code>job</code>，运行在虚拟机环境<code>ubuntu-latest</code>。</li>
+<li>第一步是获取源码，使用的 action 是<code>actions/checkout</code>。</li>
+<li>第二步是构建和部署，使用的 action 是<code>JamesIves/github-pages-deploy-action</code>。</li>
+<li>第二步需要四个环境变量，分别为 GitHub 密钥、发布分支、构建成果所在目录、构建脚本。其中，只有 GitHub 密钥是秘密变量，需要写在双括号里面，其他三个都可以直接写在文件里。</li>
+</ol>
+</blockquote>
+<p>第五步，保存上面的文件后，将整个仓库推送到 GitHub。</p>
+<p><img src="/2021/04/23/task6-zong-he-shi-jian/image2.png" alt=""></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html">GitHub Actions 入门教程 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://help.github.com/en/categories/automating-your-workflow-with-github-actions">GitHub Pages 官方文档</a></p>
+</li>
+<li><a target="_blank" rel="noopener" href="https://lukeboyle.com/blog-posts/2019/08/github-actions-for-web-apps/">Github Actions for web apps</a>, Luke Boyle</li>
+<li><a target="_blank" rel="noopener" href="https://medium.com/@adam.zolyak/my-first-week-with-github-actions-5d92de4c4851">My First Week With GitHub Actions</a>, Adam Zolyak</li>
+</ul>
 
                 
             </div>
@@ -518,7 +573,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://terence1023.github.io/2021/01/31/geoffrey-hinton/">http://terence1023.github.io/2021/01/31/geoffrey-hinton/</a>
+                    <a href="http://terence1023.github.io/2021/04/23/task6-zong-he-shi-jian/">http://terence1023.github.io/2021/04/23/task6-zong-he-shi-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -556,8 +611,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Geoffrey-Hinton/">
-                                    <span class="chip bg-color">Geoffrey Hinton</span>
+                                <a href="/tags/Docker/">
+                                    <span class="chip bg-color">Docker</span>
+                                </a>
+                            
+                                <a href="/tags/DataWhale/">
+                                    <span class="chip bg-color">DataWhale</span>
                                 </a>
                             
                         </div>
@@ -727,17 +786,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/01/31/aaai-2020/">
+                <a href="/2021/04/23/task6-zong-he-shi-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="AAAI 2020">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Task6 综合实践">
                         
-                        <span class="card-title">AAAI 2020</span>
+                        <span class="card-title">Task6 综合实践</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -747,9 +807,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -758,11 +818,16 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Geoffrey-Hinton/">
-                        <span class="chip bg-color">Geoffrey Hinton</span>
+                    <a href="/tags/Docker/">
+                        <span class="chip bg-color">Docker</span>
+                    </a>
+                    
+                    <a href="/tags/DataWhale/">
+                        <span class="chip bg-color">DataWhale</span>
                     </a>
                     
                 </div>
@@ -776,13 +841,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/30/yolo-zhuan-lan/">
+                <a href="/2021/04/22/reading-remember-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="YOLO 专栏">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Reading Remember">
                         
-                        <span class="card-title">YOLO 专栏</span>
+                        <span class="card-title">Reading Remember</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -793,7 +858,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-22
                             </span>
                         <span class="publish-author">
                             
